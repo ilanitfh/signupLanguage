@@ -1,0 +1,84 @@
+{
+  "categories": [
+    {
+      "name": "פעלים",
+      "id": "1",
+      "words": [
+        {
+          "name": "להתראות",
+          "id": "11",
+          "videoName": "bye-bye.mp4"
+        },
+        {
+          "name": "יכול",
+          "id": "12",
+          "videoName": "can.mp4"
+        }
+      ]
+    },
+    {
+      "name": "בעלי מקצוע",
+      "id": "2",
+      "words": [
+        {
+          "name": "אחות",
+          "id": "21",
+          "videoName": "nurse.mp4"
+        }
+      ]
+    },
+    {
+      "name": "זמן משחק",
+      "id": "3"
+    },
+    {
+      "name": "חלקי גוף",
+      "id": "4"
+    },
+    {
+      "name": "טבע",
+      "id": "5"
+    },
+    {
+      "name": "ברכות",
+      "id": "6",
+      "words": [
+        {
+          "name": "בוקר טוב",
+          "id": "61",
+          "videoName": "good-morning.mp4"
+        },
+        {
+          "name": "חג שמח",
+          "id": "62",
+          "videoName": "happy-holiday.mp4"
+        },
+        {
+          "name": "בבקשה",
+          "id": "63",
+          "videoName": "please.mp4"
+        }
+      ]
+    },
+    {
+      "name": "שמות תואר",
+      "id": "7"
+    },
+    {
+      "name": "בעלי חיים",
+      "id": "8"
+    },
+    {
+      "name": "אנשים",
+      "id": "9"
+    },
+    {
+      "name": "ירקות",
+      "id": "10"
+    },
+    {
+      "name": "מאכלים",
+      "id": "11"
+    }
+  ]
+}

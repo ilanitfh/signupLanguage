@@ -1,0 +1,1 @@
+export const LOAD_MAIN_JSON = "LOAD_MAIN_JSON";

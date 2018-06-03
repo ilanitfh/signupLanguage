@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="66" height="24" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="a" d="M61.7527375,12.5684968 L61.7527375,12.5684968 C63.5954276,13.2073604 64.369341,12.0846609 63.4794713,10.0566608 L61.5216697,5.59485947 C60.6326284,3.56874711 59.1920359,3.56685937 58.3021662,5.59485947 L56.3443646,10.0566608 C55.4553233,12.0827732 56.4224049,13.1401015 58.0710984,12.5684968 L58.0710984,12.5684968 L58.0710984,15.8930884 C58.0710984,16.9957401 58.9623205,17.8896159 60.0627721,17.8896159 L59.7610638,17.8896159 C60.8610348,17.8896159 61.7527375,16.9869606 61.7527375,15.8930884 L61.7527375,12.5684968 Z"/>
+        <filter id="b" width="200%" height="200%" x="-50%" y="-50%" filterUnits="objectBoundingBox">
+            <feOffset dx=".5" dy=".5" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation=".5" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0.349019608 0 0 0 0 0.349019608 0 0 0 0 0.349019608 0 0 0 0.3 0" in="shadowBlurOuter1"/>
+        </filter>
+        <mask id="c" width="8" height="13.8" x="0" y="0" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <rect width="36" height="24" fill="#F2F2F2" rx="2"/>
+        <g transform="rotate(-30 59.918 10.982)">
+            <use fill="#000" filter="url(#b)" xlink:href="#a"/>
+            <use fill="#574751" stroke="#FFF" stroke-width="2" mask="url(#c)" xlink:href="#a"/>
+        </g>
+        <g fill="#574751" transform="translate(42 8)">
+            <rect width="1" height="7" x="3" rx=".5"/>
+            <rect width="1" height="7" x="3" transform="rotate(90 3.5 3.5)" rx=".5"/>
+        </g>
+        <text fill="#574751" font-family="Roboto-Regular, Roboto" font-size="15">
+            <tspan x="6.3" y="17">Ctrl</tspan>
+        </text>
+    </g>
+</svg>

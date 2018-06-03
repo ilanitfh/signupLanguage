@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+  <g fill="none" fill-rule="evenodd" transform="translate(2 4)">
+    <path fill="#FECF33" d="M13.05-.03c1.63-2.9 4.27-2.88 5.9 0l14 24.8c1.63 2.9.26 5.23-3.06 5.23H2.1c-3.3 0-4.68-2.34-3.05-5.22l14-24.8z"/>
+    <path fill="#FFF" d="M14.03 9c-.04-.55.38-1 .94-1h2.06c.56 0 .98.46.94 1l-.68 10c-.05.55-.53 1-1.08 1h-.46c-.55 0-1.03-.46-1.06-1l-.67-10z"/>
+    <ellipse cx="16" cy="24" fill="#FFF" rx="2" ry="2"/>
+  </g>
+</svg>

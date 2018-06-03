@@ -1,0 +1,149 @@
+.integrationPreferencesContainer {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    padding: 24px 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    flex-direction: column;
+}
+
+.integrationPreferencesContainer.hidden {
+    display: none;
+}
+
+.integrationPreferencesDialog {
+    width: 400px;
+    max-height: 720px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(87, 71, 81, 0.5);
+    box-shadow: 0 2px 4px 0 var(--maroon-50pc);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+}
+
+.integrationPreferencesHeader {
+    line-height: 18px;
+    font-size: 15px;
+    height: 52px;
+    padding: 0 24px;
+    color: #574751;
+    color: var(--maroon);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: pre;
+}
+
+.integrationPreferencesHeader span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex-shrink: 1;
+    font-weight: 500;
+}
+
+.integrationPreferences {
+    overflow: auto;
+    flex-shrink: 1;
+}
+
+.integrationPreference {
+    cursor: pointer;
+    display: flex;
+}
+
+.integrationPreference.loading {
+    cursor: initial;
+}
+
+.integrationPreferenceGroup {
+    padding: 16px 12px 12px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.integrationPreferenceGroup > div {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.integrationPreferenceGroupName {
+    line-height: 18px;
+    font-size: 15px;
+    color: #574751;
+    color: var(--maroon);
+    margin-bottom: 2px;
+ }
+
+.integrationPreferenceGroupInfo {
+    line-height: 16px;
+    font-size: 14px;
+    color: #bcb5b9;
+    color: var(--warm-gray);
+}
+
+.integrationPreference:active .integrationPreferenceGroupName,
+.integrationPreference:active .integrationPreferenceGroupInfo,
+.integrationPreference.loading .integrationPreferenceGroupName,
+.integrationPreference.loading .integrationPreferenceGroupInfo {
+    color: #bcb5b9;
+    color: var(--warm-gray);
+}
+
+
+.integrationPreference input[type="checkbox"] {
+    display: none;
+}
+
+.integrationPreferenceCheckbox {
+    height: 18px;
+    width: 18px;
+    align-self: center;
+    margin-right: 24px;
+    background-image: url(../img/icCheckOff.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.integrationPreference input[type="checkbox"]:checked + .integrationPreferenceCheckbox {
+    background-image: url(../img/icCheckOn.svg);
+}
+
+.integrationPreference:active input[type="checkbox"]:checked + .integrationPreferenceCheckbox,
+.integrationPreference.loading input[type="checkbox"]:checked + .integrationPreferenceCheckbox {
+    background-image: url(../img/icCheckboxLoading.svg);
+}
+
+.integrationPreferencesFooter {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 24px;
+}
+
+.integrationPreferencesDone {
+    position: relative;
+    min-width: 72px;
+    width: auto;
+    height: 36px;
+    margin: 0;
+    padding: 9px 15px;
+    line-height: 19px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    color: #419bf9;
+    color: var(--cornflower-blue);
+}
+
+.integrationPreferencesDone:hover {
+    box-shadow: 0 2px 6px 0 rgba(87, 71, 81, 0.2);
+    box-shadow: 0 2px 6px 0 var(--maroon-20pc);
+}

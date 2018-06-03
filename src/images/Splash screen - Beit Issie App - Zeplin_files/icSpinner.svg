@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 24 24">
+  <style>
+    .st0{fill:#BCB5B9;} .st1{fill:#C7CE2D;}
+  </style>
+  <circle cx="12" cy="1.8" r="1.8" class="st0"/>
+  <ellipse cx="4.8" cy="4.8" transform="rotate(-45 4.82 4.82)" class="st1" rx="1.8" ry="1.8"/>
+  <circle cx="1.8" cy="12" r="1.8" class="st0"/>
+  <ellipse cx="4.8" cy="19.2" transform="rotate(-45 4.82 19.18)" class="st0" rx="1.8" ry="1.8"/>
+  <circle cx="12" cy="22.2" r="1.8" class="st0"/>
+  <ellipse cx="19.2" cy="19.2" transform="rotate(-45 19.18 19.18)" class="st0" rx="1.8" ry="1.8"/>
+  <circle cx="22.2" cy="12" r="1.8" class="st0"/>
+  <ellipse cx="19.2" cy="4.8" transform="rotate(-45 19.18 4.82)" class="st0" rx="1.8" ry="1.8"/>
+</svg>

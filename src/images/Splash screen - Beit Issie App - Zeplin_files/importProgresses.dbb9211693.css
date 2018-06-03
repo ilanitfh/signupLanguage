@@ -1,0 +1,424 @@
+#importProgressesButton {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    margin-right: 26px;
+}
+
+#importProgressesButton svg {
+    transform: rotate(270deg);
+}
+
+#importProgressesButton circle {
+    fill: transparent;
+    stroke-width: 2px;
+}
+
+#importProgressesButton circle#importsProgressBarBackground {
+    stroke: #f2f2f2;
+}
+
+#importProgressesButton circle#importsProgressBar {
+    stroke: #3b99fc;
+}
+
+#importsDoneTick {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 12px;
+    height: 12px;
+    display: none;
+}
+
+#importsFailedDot {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 2px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #ee6723;
+    z-index: 10000;
+}
+
+.importsFailed #importsFailedDot {
+    display: block;
+}
+
+.importsDone #importsDoneTick {
+    display: block;
+}
+
+#importProgressesContainer {
+    width: 400px;
+    position: fixed;
+    top: 48px;
+    right: 132px;
+    z-index: 10000;
+}
+
+.fadeOutImportProgresses {
+    opacity: 0;
+}
+
+#importProgressesBox {
+    width: 100%;
+    max-height: 544px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(87, 71, 81, 0.5);
+    box-shadow: 0 1px 3px 0 var(--maroon-50pc);
+    border-radius: 2px;
+}
+
+@media screen and (max-height: 688px) {
+    #importProgressesBox {
+        max-height: calc(100vh - 96px);
+    }
+}
+
+#importProgresses {
+    transition-property: height;
+    transition-timing-function: ease-in-out;
+}
+
+#clearImportProgresses {
+    margin: 8px 0 0 360px;
+}
+
+.clearImportRect {
+    width: 28px;
+    height: 4px;
+    margin-top: 4px;
+    background-color: #fff;
+    border-radius: 1px;
+    box-shadow: 0 2px 4px 0 rgba(87, 71, 81, 0.5);
+    box-shadow: 0 2px 4px 0 var(--maroon-50pc);
+}
+
+.clearImportRect:nth-child(2) {
+    transform: translateX(6px);
+}
+
+.clearImportRect:nth-child(3) {
+    transform: translateX(12px);
+}
+#importProgressesTitle {
+    width: 100%;
+    height: 52px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: pre-wrap;
+}
+
+#importProgressesTitle img {
+    margin: 0 6px;
+}
+
+.importProgress {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition-duration: 200ms, 150ms, 200ms;
+    transition-property: transform, opacity, height;
+    transition-timing-function: ease-in;
+    overflow: hidden;
+}
+
+#importProgresses > .importProgress:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+#importProgresses > .importProgress:nth-child(even) {
+    background-color: #fff;
+}
+
+.importProgressesOfProject > .importProgress:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.importProgressesOfProject > .importProgress:nth-child(odd) {
+    background-color: #fff;
+}
+
+.importProgressInformation {
+    width: 304px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+.importProgressLine {
+    width: 100%;
+    height: 18px;
+    line-height: 18px;
+    color: #574751;
+    color: var(--maroon);
+    font-size: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.importProgressBarBox {
+    height: 4px;
+    width: 100%;
+    border-radius: 3px;
+    background-color: rgba(188, 181, 185, 0.3);
+    background-color: var(--warm-gray-30pc);
+    margin: 6px 0;
+}
+
+.importProgressBar {
+    width: 0%;
+    max-width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #3b99fc;
+}
+
+.importProgress.importProgressFailed .importProgressBar {
+    display: none;
+}
+
+.importProgressDetail {
+    line-height: 16px;
+    width: 100%;
+    color: #bcb5b9;
+    color: var(--warm-gray);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.ticklingTheBackend::after {
+    content: "…";
+}
+
+.failed {
+    color: #ee6723;
+    color: var(--peach);
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+.importProgressDone {
+    cursor: pointer;
+}
+
+.importProgress.newScreen .importProgressLine::before {
+    content: "Importing";
+}
+
+.importProgress.newScreen.importProgressDone .importProgressLine::before {
+    content: "Imported";
+}
+
+.importProgress.updateScreen .importProgressLine::before {
+    content: "Replacing";
+}
+
+.importProgress.updateScreen.importProgressDone .importProgressLine::before {
+    content: "Replaced";
+}
+
+.imported3 span {
+    font-family: Comic Sans MS;
+}
+
+.imported3 .wow {
+    color: #00ffff;
+}
+
+.imported3 .suchDesigns {
+    color: #0000ff;
+}
+
+.imported3 .amaze {
+    color: #ff00ff;
+}
+
+.imported3 .soColors {
+    color: #00ff00;
+}
+
+.ticklingTheBackend,
+.uploadingImages,
+
+.failed,
+.imported,
+
+.imported1,
+.imported2,
+.imported3,
+.imported4,
+
+.tick,
+.cancelImport,
+.retryImport {
+    display: none;
+}
+
+.importProgress.uploadingImagesStep .uploadingImages,
+.importProgress.uploadingImagesStep .cancelImport {
+    display: block;
+}
+
+.importProgress.ticklingTheBackendStep .ticklingTheBackend,
+.importProgress.ticklingTheBackendStep .cancelImport {
+    display: block;
+}
+
+.importProgress.importProgressDone .imported,
+.importProgress.importProgressDone .tick {
+    display: block;
+}
+
+.importProgress.importProgressDone.message1 .imported1,
+.importProgress.importProgressDone.message4 .imported4 {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.importProgress.importProgressDone.message1 .imported1 img {
+    margin-left: 2px;
+    height: 14px;
+    width: 14px;
+}
+
+.importProgress.importProgressDone.message2 .imported2 {
+    display: block;
+}
+
+.importProgress.importProgressDone.message3 .imported3 {
+    display: block;
+}
+
+.importProgress.importProgressFailed .failed {
+    display: -webkit-box;
+}
+
+.importProgress.importProgressFailed .retryImport {
+    display: block;
+}
+
+.importProgressCommand {
+    height: 24px;
+    width: 24px;
+    margin: 0 24px;
+}
+
+.importProgressCommand img {
+    pointer-events: none;
+}
+
+.importProgressProjectLine {
+    width: 100%;
+    height: 30px;
+    background-color: #f2f2f2;
+    background-color: var(--whitey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectInformation {
+    height: 18px;
+    width: 352px;
+    font-size: 15px;
+    color: #bcb5b9;
+    color: var(--warm-gray);
+    line-height: 18px;
+}
+
+.clearImportProgress {
+    transform: translateX(100%);
+    opacity: 0;
+    height: 0;
+}
+
+@keyframes move {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 408px;
+    }
+}
+
+.gettingProjectProgress {
+    display: none;
+    padding-left: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    width: 408px;
+    height: 100%;
+    align-items: center;
+    background-image: repeating-linear-gradient(
+            -66deg,
+            transparent,
+            transparent 15px,
+            rgba(255, 255, 255, 0.2) 15px,
+            rgba(255, 255, 255, 0.2) 22px);
+    animation: move 7s linear infinite;
+}
+
+#importProgresses > .gettingProject:last-child,
+#importProgresses > .gettingProjectFailed:last-child,
+.importProgressProjectGroup:last-child .gettingProject:last-child,
+.importProgressProjectGroup:last-child .gettingProjectFailed.last-child {
+    margin-bottom: 12px;
+}
+
+#importProgresses .importProgress.gettingProject,
+#importProgresses .importProgress.gettingProjectFailed {
+    height: 36px;
+
+}
+
+#importProgresses .importProgress.gettingProject {
+    background-color: #3b99fc;
+}
+
+#importProgresses .importProgress.gettingProjectFailed {
+    background-color: #ee6723;
+    background-color: var(--peach);
+}
+
+.gettingProject .importProgressInformation,
+.gettingProjectFailed .importProgressInformation {
+    display: none;
+}
+
+.gettingProject .gettingProjectProgress {
+    display: flex;
+}
+
+.gettingProjectFailedInfo {
+    display: none;
+    padding: 0 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gettingProjectFailed .gettingProjectFailedInfo {
+    display: flex;
+}
+
+.importProgressCommand.retryFetchProject {
+    margin: 0;
+}

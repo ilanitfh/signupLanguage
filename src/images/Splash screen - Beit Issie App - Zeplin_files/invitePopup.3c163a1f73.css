@@ -1,0 +1,507 @@
+#inviteUserPopup {
+    position: absolute;
+    width: 320px;
+    max-height: 388px;
+    padding-top: 16px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(87, 71, 81, 0.5);
+    box-shadow: 0 2px 4px 0 var(--maroon-50pc);
+    cursor: default;
+    transform: translate3d(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+#inviteUserPopup.hidden {
+    display: none;
+}
+
+#inviteUserPopupAnchor {
+    position: absolute;
+    top: 66px;
+    left: 100%;
+    z-index: -1;
+    width: 15px;
+    height: 15px;
+    border-top-right-radius: 4px;
+    transform-origin: 0 0;
+    transform: rotate(45deg);
+    background-color: #fff;
+    box-shadow: 0 0 2px 0 rgba(87, 71, 81, 0.5);
+    box-shadow: 0 0 2px 0 var(--maroon-50pc);
+}
+
+#inviteUserPopup .inputArea {
+    display: flex;
+    align-items: center;
+
+    height: 48px;
+    padding: 0 12px;
+    background-color: #f2f2f2;
+    background-color: var(--whitey);
+}
+
+#inviteUserPopup .inputArea img {
+    margin: 0 10px 0 4px;
+    animation-name: spin-reverse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#inviteeHandle {
+    height: 100%;
+    flex: 1;
+    min-width: 0;
+    background-color: transparent;
+    border: none;
+    line-height: 28px;
+    font-size: 24px;
+    color: #574751;
+    color: var(--maroon);
+}
+
+#inviteUserPopup .userList {
+    overflow: auto;
+    background-color: #fff;
+    padding-bottom: 12px;
+    flex: 1 1 auto;
+}
+
+#inviteUserPopup.organizationProject .userList {
+    margin: 0;
+    display: none;
+}
+
+#inviteUserPopup .userListTypedUserAlreadyAdded {
+    display: flex;
+    padding: 12px 12px 0;
+    font-size: 14px;
+    line-height: 18px;
+    color: #574751;
+    color: var(--maroon);
+}
+
+#inviteUserPopup .userListTypedUserAlreadyAdded.someUser div:nth-of-type(1),
+#inviteUserPopup .userListTypedUserAlreadyAdded.selfUser div:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+}
+
+#inviteUserPopup .userListTypedUserAlreadyAdded.someUser div:nth-of-type(2),
+#inviteUserPopup .userListTypedUserAlreadyAdded.selfUser div:nth-of-type(1) {
+    display: none;
+}
+
+#inviteUserPopup .inviteeListAlreadyAdded,
+#inviteUserPopup .inviteeListEmpty {
+    display: none;
+    padding: 26px 0 36px;
+    height: 102px;
+    text-align: center;
+    font-size: 15px;
+    color: #574751;
+    color: var(--maroon);
+    background-color: #fff;
+}
+
+#inviteUserPopup.noNewInvitees .inviteeListAlreadyAdded,
+#inviteUserPopup.noInvitees .inviteeListEmpty {
+    display: block;
+}
+
+#inviteUserPopup .inviteeListAlreadyAdded div,
+#inviteUserPopup .inviteeListEmpty div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#inviteUserPopup .invitee {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    padding: 0 12px 0 12px;
+}
+
+#inviteUserPopup .invitee.member,
+#inviteUserPopup .invitee.wildling:not(.newUser) {
+    height: auto;
+    padding: 12px;
+    align-items: flex-start;
+}
+
+#inviteUserPopup .invitee.hidden {
+    display: none;
+}
+
+#inviteUserPopup .invitee:nth-child(odd) {
+    background-color: #f2f2f2;
+    background-color: var(--whitey);
+}
+
+#inviteUserPopup .invitee:nth-child(even) {
+    background-color: #fff;
+}
+
+#inviteUserPopup .user:nth-child(odd) {
+    background-color: #fff;
+}
+
+#inviteUserPopup .user:nth-child(even) {
+    background-color: #f2f2f2;
+    background-color: var(--whitey);
+}
+
+#inviteUserPopup .invitee.selected.newUser,
+#inviteUserPopup .invitee.selected {
+    background-color: #fecf33;
+    background-color: var(--yellow);
+}
+
+#inviteUserPopup .invitee .userInfo {
+    flex: 1;
+    overflow: hidden;
+}
+
+#inviteUserPopup .invitee .userImageFrame {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+}
+
+#inviteUserPopup .invitee .userImage {
+    border-radius: 50%;
+}
+
+#inviteUserPopup .invitee .username {
+    line-height: 18px;
+    font-size: 15px;
+    color: #574751;
+    color: var(--maroon);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#inviteUserPopup .invitee .email,
+#inviteUserPopup .invitee .organizationTags {
+    line-height: 16px;
+    font-size: 14px;
+    color: #bcb5b9;
+    color: var(--warm-gray);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#inviteUserPopup .invitee .username:empty + .email {
+    line-height: 18px;
+    font-size: 15px;
+    color: #574751;
+    color: var(--maroon);
+}
+
+#inviteUserPopup .invitee.member .organizationTags:not(:empty) {
+    margin-top: 6px;
+}
+
+#inviteUserPopup .invitee.inviteRetry .organizationTags:not(:empty) {
+    margin: 0;
+    display: none;
+}
+
+#inviteUserPopup .invitee.selected .username,
+#inviteUserPopup .invitee.selected .email,
+#inviteUserPopup .invitee.selected .username:empty + .email,
+#inviteUserPopup .invitee.selected .organizationTags {
+    color: #fff;
+}
+
+#inviteUserPopup .invitee .inviteExtraInfo {
+    line-height: 16px;
+    font-size: 14px;
+    color: #bcb5b9;
+    color: var(--warm-gray);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#inviteUserPopup .invitee.selected .inviteExtraInfo {
+    color: rgba(255, 255, 255, 0.7);
+    color: var(--white-70pc);
+}
+
+#inviteUserPopup .invitee.selected.inviteRetry .inviteExtraInfo,
+#inviteUserPopup .invitee.inviteRetry .inviteExtraInfo {
+    color: #ee6723;
+    color: var(--peach);
+}
+
+#inviteUserPopup .invitee.inviteRetry .email:not(:empty) ~ .inviteExtraInfo {
+    margin-top: 6px;
+}
+
+#inviteUserPopup .invitee.inviteRetry .email:empty ~ .inviteExtraInfo {
+    margin-top: 0;
+}
+
+#inviteUserPopup .invitee .action {
+    background-image: url(../img/icInviteAdd.svg);
+    margin-left: 6px;
+    width: 24px;
+    height: 24px;
+}
+
+#inviteUserPopup .invitee.member .action,
+#inviteUserPopup .invitee.wildling .action {
+    align-self: center;
+}
+
+#inviteUserPopup .invitee.selected .action {
+    background-image: url(../img/icInviteAddSelected.svg);
+}
+
+#inviteUserPopup .invitee.inviteDone .action {
+    background-image: url(../img/icInviteDone.svg);
+}
+
+#inviteUserPopup .invitee.selected.inviteDone .action {
+    background-image: url(../img/icInviteDoneSelected.svg);
+}
+
+#inviteUserPopup .invitee.inviteRetry .action {
+    background-image: url(../img/icInviteRetry.svg);
+}
+
+#inviteUserPopup .invitee.selected.inviteRetry .action {
+    background-image: url(../img/icInviteRetrySelected.svg);
+}
+
+#inviteUserPopup .invitee.inviteSpinner .action {
+    background-image: none;
+    cursor: default;
+}
+
+#inviteUserPopup .invitee.inviteSpinner .action .spinnerInvite,
+#inviteUserPopup .invitee.selected.inviteSpinner .action .spinnerInviteSelected {
+    display: inline-block;
+}
+
+#inviteUserPopup .invitee .action .spinnerInvite,
+#inviteUserPopup .invitee.selected.inviteSpinner .action .spinnerInvite,
+#inviteUserPopup .invitee .action .spinnerInviteSelected {
+    display: none;
+    animation-name: spin-reverse;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#inviteUserPopup .inviteUserFooter {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 12px;
+    font-size: 13px;
+    color: #bcb5b9;
+    color: var(--warm-gray);
+}
+
+#inviteUserPopup .inviteUserFooter img {
+    width: 16px;
+    margin-right: 6px;
+}
+
+#inviteUserPopup.noNewInvitees .inviteUserFooter,
+#inviteUserPopup.noInvitees .inviteUserFooter {
+    display: none;
+}
+
+#inviteUserPopup .invitee.newUser {
+    height: 36px;
+    background-color: #fff;
+    padding: 0 12px;
+}
+
+#inviteUserPopup .user.hidden + .user.newUser {
+    margin-top: 12px;
+}
+
+#inviteUserPopup .invitee .inviteNewUserButton {
+    max-width: 296px;
+    height: 24px;
+    padding: 4px;
+    background-color: rgba(188, 181, 185, 0.3);
+    background-color: var(--warm-gray-30pc);
+    border-radius: 12px;
+    cursor: default;
+    display: flex;
+    align-items: center;
+}
+
+#inviteUserPopup .invitee .inviteNewUserButton:hover {
+    cursor: pointer;
+}
+
+#inviteUserPopup .invitee.selected .inviteNewUserButton {
+    background-color: #fff;
+}
+
+#inviteUserPopup .invitee .inviteNewUserButton .inviteNewUserButtonText {
+    margin: 0 8px 0 6px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #574751;
+    color: var(--maroon);
+}
+
+#inviteUserPopup .invitee .inviteNewUserButton .inviteNewUserButtonText span {
+    max-width: 214px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#inviteUserPopup .organizationInviteeList h3 {
+    line-height: 18px;
+    opacity: 0.99;
+    font-size: 15px;
+    color: #574751;
+    color: var(--maroon);
+    padding: 16px 12px 6px;
+}
+
+#inviteUserPopup .noTags .tagsHeader,
+#inviteUserPopup .noMembers .membersHeader,
+#inviteUserPopup .membersWithTagHeader,
+#inviteUserPopup .membersWithTagList,
+#inviteUserPopup .noWildlings .wildlingsHeader {
+    display: none;
+}
+
+#inviteUserPopup .hasMembersWithTag .membersWithTagHeader,
+#inviteUserPopup .hasMembersWithTag .membersWithTagList {
+    display: block;
+}
+
+#inviteUserPopup .membersWithTagHeader::before {
+    content: "Members with “";
+}
+
+#inviteUserPopup .membersWithTagHeader::after {
+    content: "” tag";
+}
+
+#inviteUserPopup .inviteByTag {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+
+#inviteUserPopup .invitee.inviteByTag {
+    background-color: #fff;
+}
+
+#inviteUserPopup .inviteByTag.selected {
+    background-color: #fecf33;
+    background-color: var(--yellow);
+}
+
+#inviteUserPopup .tagNameAndMemberCount {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+#inviteUserPopup .tagName {
+    padding: 3px 12px;
+    line-height: 18px;
+    font-size: 15px;
+    color: #574751;
+    color: var(--maroon);
+    border-radius: 12px;
+    background-color: #f2f2f2;
+    background-color: var(--whitey);
+    margin-right: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-shrink: 1
+}
+
+#inviteUserPopup .inviteByTag.selected .tagName {
+    background-color: #ffffff;
+}
+
+#inviteUserPopup .memberCount {
+    line-height: 16px;
+    font-size: 14px;
+    color: #bcb5b9;
+    color: var(--warm-gray);
+    margin-right: 6px;
+}
+
+#inviteUserPopup .inviteByTag.selected .memberCount {
+    color: #fff;
+}
+
+#inviteUserPopup .showRemainingTags {
+    padding: 10px 24px;
+    line-height: 16px;
+    font-size: 14px;
+    color: #bcb5b9;
+    color: var(--warm-gray);
+    cursor: pointer;
+}
+
+#inviteUserPopup .showRemainingTags:empty,
+#inviteUserPopup .inputArea.typed ~ .organizationInviteeList .showRemainingTags {
+    display: none;
+}
+
+#inviteUserPopup .showRemainingTags::after {
+    content: " more tag…";
+}
+
+#inviteUserPopup .showRemainingTags.multiple::after {
+    content: " more tags…";
+}
+
+#inviteUserPopup .organizationInviteeList {
+    display: none;
+    overflow: auto;
+    background-color: #fff;
+    padding-bottom: 12px;
+    flex: 1 1 auto;
+}
+
+#inviteUserPopup.organizationProject .organizationInviteeList {
+    display: block;
+}
+
+#inviteUserPopup .enterAnEmailToInviteFirstTime,
+#inviteUserPopup .invitesToTheProjectOnlyInfo {
+    font-size: 14px;
+    line-height: 16px;
+    color: #574751;
+    color: var(--maroon);
+    display: none;
+    padding: 12px;
+    background-color: #fff;
+}
+
+#inviteUserPopup .writeAnEmailToInvite ~ .enterAnEmailToInviteFirstTime,
+#inviteUserPopup .showAddsToTheProjectOnlyInfo ~ .invitesToTheProjectOnlyInfo {
+    display: block;
+}
+
+#inviteUserPopup .writeAnEmailToInvite,
+#inviteUserPopup .showAddsToTheProjectOnlyInfo {
+    padding-bottom: 0;
+}

@@ -1,0 +1,357 @@
+#manageTagsContainer {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#manageTagsContainer.hidden {
+    display: none;
+}
+
+#manageTagsPopup {
+    width: 420px;
+    height: 374px;
+
+    border-radius: 4px;
+    background-color: #fff;
+
+    box-shadow: 0 2px 4px 0 rgba(87, 71, 81, 0.5);
+    box-shadow: 0 2px 4px 0 var(--maroon-50pc);
+
+    padding: 16px 0;
+}
+
+#searchTagsContainer {
+    width: 100%;
+    height: 36px;
+    background-color: #f6f6f6;
+    padding: 4px 16px;
+}
+
+#tagSearchText {
+    line-height: 28px;
+    background: transparent;
+    font-size: 24px;
+    color: #574751;
+    color: var(--maroon);
+    height: 100%;
+    width: 388px;
+}
+
+#selectTags {
+    width: 100%;
+    height: 270px;
+    overflow: auto;
+}
+
+.taglessProject #selectTags,
+.taglessOrganization #selectTags {
+    display: none;
+}
+
+#noTagsOnScreen,
+#noTagsOnMembers {
+    font-size: 15px;
+    color: #bcb5b9;
+    color: var(--warm-gray);
+    line-height: 18px;
+    height: 36px;
+    padding: 9px 16px;
+    display: none;
+}
+
+.taglessScreen #noTagsOnScreen,
+.taglessMembers #noTagsOnMembers {
+    display: block;
+}
+
+#tagsOfScreen,
+#tagsOfSelectedMembers {
+    padding-left: 12px;
+    padding-top: 6px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tagButton,
+.tagOfScreen,
+.tagOfMember {
+    height: 24px;
+    background-color: rgba(188, 181, 185, 0.3);
+    background-color: var(--warm-gray-30pc);
+    border-radius: 12px;
+}
+
+.tagButton {
+    padding: 0 12px 0 5px;
+}
+
+.tagButton > div,
+.tagOfScreen,
+.tagOfMember {
+    display: flex;
+    align-items: center;
+}
+
+#screenTags .tagButton {
+    margin: 3px;
+}
+
+.tagButton img.disabled,
+.tagButton:disabled img.enabled,
+.tagButton.disabled img.enabled {
+    display: none;
+}
+
+.tagButton:disabled img.disabled,
+.tagButton.disabled img.disabled {
+    display: initial;
+}
+
+#tagsOfScreen .tagOfScreen,
+#tagsOfSelectedMembers .tagOfMember {
+    margin: 0 6px 6px 0;
+    max-width: 396px;
+}
+
+.tagButtonText {
+    font-size: 14px;
+    color: #574751;
+    color: var(--maroon);
+    line-height: 16px;
+    max-width: 358px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#manageTagsButtonText {
+    width: 52px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+#manageTagsButton:disabled #manageTagsButtonText,
+#manageTagsButton.disabled #manageTagsButtonText {
+    color: #bcb5b9;
+    color: var(--warm-gray);
+}
+
+#manageTagsButtonText:before {
+    content: "Manage";
+}
+
+#manageTagsButton:enabled:not(.disabled):hover #manageTagsButtonText:before {
+    content: "Alt+T";
+}
+
+.mac #manageTagsButton:enabled:not(.disabled):hover #manageTagsButtonText:before {
+    content: "⌥T";
+}
+
+.taglessScreen #tagsOfScreen,
+.taglessMembers #tagsOfSelectedMembers {
+    display: none;
+}
+
+.tagOfScreen .tagButtonText,
+.tagOfMember .tagButtonText {
+    margin-left: 12px;
+    margin-right: 6px;
+}
+
+.removeTag {
+    cursor: pointer;
+    margin-right: 4px;
+    background-color: rgba(188, 181, 185, 0.5);
+    background-color: var(--warm-gray-50pc);
+    border-radius: 50%;
+}
+
+.removeTag:active {
+    background-color: rgba(87, 71, 81, 0.5);
+    background-color: var(--maroon-50pc);
+}
+
+.tagSuggestion {
+    width: 100%;
+    height: 36px;
+
+    padding: 9px 16px;
+
+    cursor: pointer;
+
+    color: #574751;
+    color: var(--maroon);
+
+    display: flex;
+}
+
+.tagSuggestion.selected {
+    background-color: #fecf33;
+    background-color: var(--yellow);
+
+    color: #fff;
+}
+
+.tagSuggestion .tagSuggestionText {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    height: 18px;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+#createTag.tagButton {
+    max-width: 396px;
+}
+
+#createTag #createTagIcon {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+    background-color: #574751;
+    background-color: var(--maroon);
+    border-radius: 50%;
+    background-image: url(../img/icCreateNewTag.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+#createTagContainer {
+    padding: 6px 12px;
+}
+
+#createTagContainer.hidden {
+    display: none;
+}
+
+#createTag .tagButtonText {
+    margin-left: 6px;
+    margin-right: 12px;
+
+    display: flex;
+    align-items: center;
+}
+
+#createTag .tagButtonText span {
+    max-width: 253px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.selected #createTag {
+    background-color: #fff;
+}
+
+#noTagsOnProject,
+#noTagsOnOrganization {
+    width: 100%;
+    height: 270px;
+
+    display: none;
+}
+
+.taglessProject #noTagsOnProject,
+.taglessOrganization #noTagsOnOrganization {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#tagIcon {
+    width: 42px;
+    height: 42px;
+    margin-top: 96px;
+}
+
+#noTagDefinedOnProjectYet,
+#noTagDefinedOnOrganizationYet {
+    height: 36px;
+    margin-top: 12px;
+    width: 100%;
+
+    display: flex;
+}
+
+#noTagDefinedOnProjectYetText,
+#noTagDefinedOnOrganizationYetText {
+    margin-left: calc((100% - 187px) / 2);
+    width: 187px;
+    text-align: center;
+    font-size: 15px;
+    color: #bcb5b9;
+    color: var(--warm-gray);
+    line-height: 18px;
+}
+
+#noTagDefinedOnProjectYetDart,
+#noTagDefinedOnOrganizationYetDart {
+    width: 18px;
+    height: 16px;
+    margin-left: 2.5px;
+    margin-top: 19px;
+}
+
+#manageTagsCommands {
+    height: 52px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#manageTagsDone {
+    width: 72px;
+    height: 36px;
+    margin-right: 24px;
+    font-size: 16px;
+    color: #419bf9;
+    color: var(--cornflower-blue);
+    font-weight: 500;
+}
+
+#manageTagsDone:hover {
+    box-shadow: 0 2px 6px 0 rgba(87,71,81, 0.2);
+    box-shadow: 0 2px 6px 0 var(--maroon-20pc);
+}
+
+#taglessProjectInfoLine {
+    height: 48px;
+    width: 100%;
+    display: none;
+    padding: 12px 0 20px 18px;
+    font-size: 14px;
+    color: #574751;
+    color: var(--maroon);
+    line-height: 16px;
+}
+
+#taglessProjectInfoLine > span:first-child {
+    margin-right: 6px;
+    font-weight: 500;
+}
+
+#tags:empty {
+    display: none;
+}
+
+#tags.loading:empty + #taglessProjectInfoLine {
+    display: none;
+}
+
+#tags:empty + #taglessProjectInfoLine {
+    display: flex;
+}

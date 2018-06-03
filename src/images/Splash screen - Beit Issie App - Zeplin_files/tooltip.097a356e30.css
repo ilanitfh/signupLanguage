@@ -1,0 +1,41 @@
+.tooltip {
+    position: fixed;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    transform: translateX(-50%);
+    max-width: 360px;
+    padding: 8px;
+    background-color: #fef7e0;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(87, 71, 81, 0.5);
+    box-shadow: 0 2px 4px 0 var(--maroon-50pc);
+    line-height: 16px;
+    font-size: 14px;
+    color: #574751;
+    color: var(--maroon);
+    z-index: 1000;
+}
+
+.tooltip.overflown {
+    transform: none;
+}
+
+.tooltip p:nth-child(n+2) {
+    margin-top: 14px;
+}
+
+.tooltip img {
+    height: 16px;
+    vertical-align: bottom;
+}
+
+.tooltip a {
+    color: #c8cf2d;
+    color: var(--light-green);
+}
+
+.tooltipShown {
+    visibility: visible;
+    opacity: 1;
+}
