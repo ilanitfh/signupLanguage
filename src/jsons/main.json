@@ -3,6 +3,7 @@
     {
       "name": "פעלים",
       "id": "1",
+      "imageName": "verbs.png",
       "words": [
         {
           "name": "להתראות",
@@ -19,6 +20,7 @@
     {
       "name": "בעלי מקצוע",
       "id": "2",
+      "imageName": "occupations.png",
       "words": [
         {
           "name": "אחות",
@@ -29,15 +31,18 @@
     },
     {
       "name": "זמן משחק",
-      "id": "3"
+      "id": "3",
+      "imageName": "time.png"
     },
     {
       "name": "חלקי גוף",
-      "id": "4"
+      "id": "4",
+      "imageName": "body_parts.png"
     },
     {
       "name": "טבע",
-      "id": "5"
+      "id": "5",
+      "imageName": "nature.png"
     },
     {
       "name": "ברכות",
@@ -62,11 +67,14 @@
     },
     {
       "name": "שמות תואר",
-      "id": "7"
+      "id": "7",
+      "imageName": "adjective.png"
+
     },
     {
       "name": "בעלי חיים",
-      "id": "8"
+      "id": "8",
+      "imageName": "animals.png"
     },
     {
       "name": "אנשים",
@@ -74,11 +82,13 @@
     },
     {
       "name": "ירקות",
-      "id": "10"
+      "id": "10",
+      "imageName": "vegetables.png"
     },
     {
       "name": "מאכלים",
-      "id": "11"
+      "id": "11",
+      "imageName": "food.png"
     }
   ]
 }

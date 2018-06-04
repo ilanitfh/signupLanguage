@@ -1,18 +1,21 @@
 import React from "react";
 import '../css/App.css';
 import {jsonLocalCall} from "../apis/JsonLocalCall";
-import {Link} from "react-router";
+import Tile from "./Tile";
 
 class Body extends React.Component {
     render() {
-        let mainJson =  jsonLocalCall("main");
+        let mainJson = jsonLocalCall("main");
+
+        let tilesElements = mainJson.categories.map((category) =>
+            <Tile tileId={category.id} tileName={category.name} tileUrl={"/word/" + category.id} imageName={category.imageName} />);
         return (
             <div className="App-intro">
-                    {
-                        mainJson.categories.map(function(category){
-                            return <div key={category.id} className="rtl"><Link to={"/word/" + category.id}>{category.name}</Link></div>
-                        })
-                    }
+                <div className="centerWidthAlign ">
+                    <div className="fgTileContainer ">
+                        {tilesElements}
+                    </div>
+                </div>
             </div>
         )
     }

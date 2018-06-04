@@ -13,7 +13,7 @@ const getJsonContent = (jsonName):string => {
 };
 
 /**
- * Get the content of the json files contains the form fields
+ * Get the content of the json files
  * @param jsonName
  * @returns {string}
  */
