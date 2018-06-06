@@ -8,10 +8,10 @@ const Tile = ({tileId, tileName, tileUrl, imageName}) => {
     let imageSrc =  imageName ? imageLocalCall(imageName): "image1.png";
     return (
         <Link to={tileUrl}>
-            <div className="fgTile" key={tileId}>
+            <div className="fgTile">
                 <span>{tileName}</span>
-                <div>
-                    <img src={imageSrc} alt={tileName} width="100px" height="100px"/>
+                <div className="tileImage">
+                    <img src={imageSrc} alt={tileName} width="70%" height="70%"/>
                 </div>
             </div>
         </Link>

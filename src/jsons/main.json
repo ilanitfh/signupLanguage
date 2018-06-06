@@ -35,7 +35,7 @@
       "imageName": "time.png"
     },
     {
-      "name": "חלקי גוף",
+      "name": "אברי גוף",
       "id": "4",
       "imageName": "body_parts.png"
     },
@@ -47,6 +47,7 @@
     {
       "name": "ברכות",
       "id": "6",
+      "imageName": "greeting.png",
       "words": [
         {
           "name": "בוקר טוב",
@@ -78,7 +79,8 @@
     },
     {
       "name": "אנשים",
-      "id": "9"
+      "id": "9",
+      "imageName": "people.png"
     },
     {
       "name": "ירקות",

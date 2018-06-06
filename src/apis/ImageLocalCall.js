@@ -23,6 +23,10 @@ const getImageContent = (image):string => {
         return require("../images/vegetables.png");
         case "verbs.png":
             return require("../images/verbs.png");
+        case "greeting.png":
+            return require("../images/greeting.png");
+        case "people.png":
+            return require("../images/people.png");
         default:
             throw new Error("Image Not Found " + image);
     }

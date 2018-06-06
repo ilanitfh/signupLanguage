@@ -156,3 +156,7 @@
     pointer-events: none;
     color: #cccccc;
 }
+
+.tileImage {
+    margin-top: 20px;
+}
