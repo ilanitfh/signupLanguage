@@ -6,14 +6,16 @@
       "imageName": "verbs.png",
       "words": [
         {
-          "name": "להתראות",
+          "name": "אוהב",
           "id": "11",
-          "videoName": "bye-bye.mp4"
+          "imageName": "love.png",
+          "videoName": "love.mov"
         },
         {
           "name": "יכול",
           "id": "12",
-          "videoName": "can.mp4"
+          "imageName": "can.png",
+          "videoName": "can.mov"
         }
       ]
     },
@@ -25,7 +27,8 @@
         {
           "name": "אחות",
           "id": "21",
-          "videoName": "nurse.mp4"
+          "imageName": "אחות.pngb",
+          "videoName": "אחות.mp4"
         }
       ]
     },
@@ -52,17 +55,20 @@
         {
           "name": "בוקר טוב",
           "id": "61",
-          "videoName": "good-morning.mp4"
+          "videoName": "בוקר טוב.mp4",
+          "imageName": "בוקר טוב.png"
         },
         {
           "name": "חג שמח",
           "id": "62",
-          "videoName": "happy-holiday.mp4"
+          "videoName": "חג שמח.mp4",
+          "imageName": "חג שמח.png"
         },
         {
           "name": "בבקשה",
           "id": "63",
-          "videoName": "please.mp4"
+          "videoName": "בבקשה_1.mp4",
+          "imageName": "בבקשה.png"
         }
       ]
     },

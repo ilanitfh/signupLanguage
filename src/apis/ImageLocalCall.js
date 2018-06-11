@@ -27,6 +27,18 @@ const getImageContent = (image):string => {
             return require("../images/greeting.png");
         case "people.png":
             return require("../images/people.png");
+        case "can.png":
+            return require("../images/can.png");
+        case "love.png":
+            return require("../images/love.png");
+        case "אחות.png":
+            return require("../images/אחות.png");
+        case "בבקשה.png":
+            return require("../images/בבקשה.png");
+        case "בוקר טוב.png":
+            return require("../images/בוקר טוב.png");
+        case "חג שמח.png":
+            return require("../images/חג שמח.png");
         default:
             throw new Error("Image Not Found " + image);
     }

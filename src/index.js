@@ -7,7 +7,7 @@ import './index.css';
 //Containers
 import App from './App';
 import Word from "./containers/Word";
-import Body from "./components/Body";
+import Body from "./containers/Body";
 import Video from "./containers/Video";
 
 import configureStore from "./store/ConfigureStore";

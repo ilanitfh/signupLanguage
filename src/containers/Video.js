@@ -14,7 +14,7 @@ class Video extends React.Component {
                     playsInline
                     poster="/images/image.png"
                     src={videoContent}
-                    autoPlay="true"
+                    autoPlay={true}
                 />
             </div>
         )
