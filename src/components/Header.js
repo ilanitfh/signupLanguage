@@ -1,16 +1,25 @@
 import React from "react";
 import '../css/App.css';
-//import logo from '../images/image1.png';
+import '../css/style.css';
 
 class Header extends React.Component {
     render() {
         return (
             <div>
-            <div className="App-header">
-                <h1 className="App-title">
-                            שפת הסימנים - קטגוריות
-                </h1>
-           </div>
+                <div className="App-header">
+                    <div className="headerElement">
+                    <button className="zmdi zmdi-info-outline"/>
+                    <button  className="zmdi zmdi-menu"/>
+                    </div>
+                    <div className="headerElement">
+                    <h1 className="App-title">
+                        שפת הסימנים - קטגוריות
+                    </h1>
+                    </div>
+                    <div className="headerElement">
+                    <issie-search theme="blue" slot="end-bar"></issie-search>
+                    </div>
+                </div>
             </div>
         )
     }

@@ -12,6 +12,7 @@
   height: 103px;
   padding: 20px;
   color: white;
+  width: 100vw;
 }
 
 .App-title {
@@ -36,4 +37,9 @@
 
 .rtl {
   direction: rtl;
+}
+
+.headerElement {
+  display:inline-block;
+  child-align: left;
 }
