@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="43" viewBox="0 0 44 43">
+    <defs>
+        <rect id="a" width="2" height="14" x="17" y="8" rx="1"/>
+        <path id="b" d="M18.89 20.39a1 1 0 0 1 1 1v7a1 1 0 1 1-2 0v-7a1 1 0 0 1 1-1z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(2 1)">
+        <ellipse cx="20" cy="20.5" fill="#FFF" rx="20" ry="19.5"/>
+        <path fill="#DADADA" d="M3.044 11.324c3.1-4.883 8.32-8.355 14.52-9.007 10.776-1.132 20.429 6.685 21.562 17.46.651 6.2-1.66 12.028-5.792 16.076a19.535 19.535 0 0 0 2.94-12.555C35.143 12.522 25.49 4.705 14.715 5.838a19.535 19.535 0 0 0-11.67 5.486z"/>
+        <ellipse cx="20" cy="20.5" stroke="#F6B832" stroke-width="4" rx="20" ry="19.5"/>
+        <g transform="rotate(-29 18 15)">
+            <use fill="#D8D8D8" xlink:href="#a"/>
+            <rect width="1" height="13" x="17.5" y="8.5" stroke="#979797" rx=".5"/>
+        </g>
+        <g transform="rotate(-135 18.89 24.89)">
+            <use fill="#D8D8D8" xlink:href="#b"/>
+            <path stroke="#979797" d="M18.89 20.89a.5.5 0 0 0-.5.5v7a.5.5 0 1 0 1 0v-7a.5.5 0 0 0-.5-.5z"/>
+        </g>
+        <circle cx="21.5" cy="21.5" r="2.5" fill="#C98880"/>
+    </g>
+</svg>
