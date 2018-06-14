@@ -1,0 +1,172 @@
+:host {
+    --shell-header-background-color-0: rgb(206, 206, 206);
+    --shell-header-background-color-1: rgb(143, 143, 143);
+    --shell-header-text-color: rgb(255, 255, 255);
+    --shell-main-background-color-0: rgb(250, 250, 250);
+    --shell-main-background-color-1: rgb(184, 184, 184);
+    --shell-decor-background-color-0: rgb(255,255,255);
+    --shell-decor-background-color-1: rgb(132,132,132);
+    --shell-decor-shade-color-0: rgb(96,96,96);
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+header {
+    flex-shrink: 0;
+    flex-grow: 0;
+    min-height: 136px;
+    max-height: 136px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom,
+        var(--shell-header-background-color-0),
+        var(--shell-header-background-color-1)
+    );
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+header > div {
+    flex-shrink: 1;
+    flex-grow: 1;
+    min-height: 76px;
+    padding: 0 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--shell-header-text-color);
+}
+header:after {
+    display: block;
+    content: '';
+    background-color: #000;
+    opacity: 0.19;
+    min-height: 3.4375rem;
+    max-height: 3.4375rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+main {
+    flex-shrink: 1;
+    flex-grow: 1;
+    padding: 8px 73px 0;
+    background-image: radial-gradient(circle at 49% -14%,
+        var(--shell-main-background-color-0),
+        var(--shell-main-background-color-1)
+    );
+}
+::slotted(button) {
+    display: inline-block;
+    font-size: 24px !important;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    padding: 0;
+    margin: 0 8px;
+}
+.start-bar {
+    display: flex;
+    justify-content: flex-start;
+    min-width: 30%;
+}
+.end-bar {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 30%;
+}
+.title {
+    position: relative;
+    font-size: 24px;
+    font-weight: 200;
+}
+.projectors {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px;
+    margin: -55px 0 0 0;
+    padding: 0 135px;
+    position: relative;
+    z-index: 1;
+}
+.projectors > li {
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: block;
+    width: 68px;
+    height: 13px;
+    background: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 68 13" width="68" height="13"><defs><path d="M39.9 0.1L41.79 0.17L43.65 0.27L45.46 0.38L47.23 0.51L48.95 0.66L50.61 0.83L52.22 1.01L53.77 1.21L55.26 1.43L56.68 1.66L58.04 1.9L59.32 2.16L60.53 2.44L61.66 2.72L62.7 3.02L63.67 3.32L64.54 3.64L65.33 3.97L66.02 4.31L66.61 4.66L67.1 5.01L67.49 5.37L67.77 5.74L67.94 6.12L68 6.5L67.94 6.88L67.77 7.26L67.49 7.63L67.1 7.99L66.61 8.34L66.02 8.69L65.33 9.03L64.54 9.36L63.67 9.68L62.7 9.98L61.66 10.28L60.53 10.56L59.32 10.84L58.04 11.1L56.68 11.34L55.26 11.57L53.77 11.79L52.22 11.99L50.61 12.17L48.95 12.34L47.23 12.49L45.46 12.62L43.65 12.73L41.79 12.83L39.9 12.9L37.96 12.96L36 12.99L34 13L32 12.99L30.04 12.96L28.1 12.9L26.21 12.83L24.35 12.73L22.54 12.62L20.77 12.49L19.05 12.34L17.39 12.17L15.78 11.99L14.23 11.79L12.74 11.57L11.32 11.34L9.96 11.1L8.68 10.84L7.47 10.56L6.34 10.28L5.3 9.98L4.33 9.68L3.46 9.36L2.67 9.03L1.98 8.69L1.39 8.34L0.9 7.99L0.51 7.63L0.23 7.26L0.06 6.88L0 6.5L0.06 6.12L0.23 5.74L0.51 5.37L0.9 5.01L1.39 4.66L1.98 4.31L2.67 3.97L3.46 3.64L4.33 3.32L5.3 3.02L6.34 2.72L7.47 2.44L8.68 2.16L9.96 1.9L11.32 1.66L12.74 1.43L14.23 1.21L15.78 1.01L17.39 0.83L19.05 0.66L20.77 0.51L22.54 0.38L24.35 0.27L26.21 0.17L28.1 0.1L30.04 0.04L32 0.01L34 0L36 0.01L37.96 0.04L39.9 0.1ZM28.02 0.11L26.11 0.19L24.26 0.3L22.47 0.43L20.74 0.57L19.07 0.74L17.48 0.93L15.97 1.13L14.54 1.35L13.19 1.59L11.94 1.84L10.78 2.1L9.72 2.38L8.77 2.67L7.93 2.98L7.21 3.29L6.61 3.62L6.13 3.95L5.78 4.29L5.57 4.64L5.5 5L5.57 5.36L5.78 5.71L6.13 6.05L6.61 6.38L7.21 6.71L7.93 7.02L8.77 7.33L9.72 7.62L10.78 7.9L11.94 8.16L13.19 8.41L14.54 8.65L15.97 8.87L17.48 9.07L19.07 9.26L20.74 9.43L22.47 9.57L24.26 9.7L26.11 9.81L28.02 9.89L29.97 9.95L31.97 9.99L34 10L36.03 9.99L38.03 9.95L39.98 9.89L41.89 9.81L43.74 9.7L45.53 9.57L47.26 9.43L48.93 9.26L50.52 9.07L52.03 8.87L53.46 8.65L54.81 8.41L56.06 8.16L57.22 7.9L58.28 7.62L59.23 7.33L60.07 7.02L60.79 6.71L61.39 6.38L61.87 6.05L62.22 5.71L62.43 5.36L62.5 5L62.43 4.64L62.22 4.29L61.87 3.95L61.39 3.62L60.79 3.29L60.07 2.98L59.23 2.67L58.28 2.38L57.22 2.1L56.06 1.84L54.81 1.59L53.46 1.35L52.03 1.13L50.52 0.93L48.93 0.74L47.26 0.57L45.53 0.43L43.74 0.3L41.89 0.19L39.98 0.11L38.03 0.05L36.03 0.01L34 0L31.97 0.01L29.97 0.05L28.02 0.11Z" id="b26c4akmi"></path><path d="M62.5 5.55C62.5 8.31 49.73 10.55 34 10.55C18.27 10.55 5.5 8.31 5.5 5.55C5.5 2.79 18.27 0.55 34 0.55C49.73 0.55 62.5 2.79 62.5 5.55Z" id="a1xhp3zq0e"></path><path d="M54.5 5.05C54.5 7.53 45.31 9.55 34 9.55C22.69 9.55 13.5 7.53 13.5 5.05C13.5 2.56 22.69 0.55 34 0.55C45.31 0.55 54.5 2.56 54.5 5.05Z" id="aNm4dAgNy"></path><path d="M54 4.3C54 6.23 45.04 7.8 34 7.8C22.96 7.8 14 6.23 14 4.3C14 2.37 22.96 0.8 34 0.8C45.04 0.8 54 2.37 54 4.3Z" id="f1RohzgKr"></path></defs><g><g><g><use xlink:href="%23b26c4akmi" opacity="1" fill="%23484d52" fill-opacity="1"></use></g><g><use xlink:href="%23a1xhp3zq0e" opacity="1" fill="%23373b3d" fill-opacity="1"></use></g><g><use xlink:href="%23aNm4dAgNy" opacity="1" fill="%23ffffff" fill-opacity="0.5"></use></g><g><use xlink:href="%23f1RohzgKr" opacity="1" fill="%23ffffff" fill-opacity="1"></use></g></g></g></svg>');
+    position: relative;
+}
+.projectors > li:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 134px;
+    height: 180px;
+    top: 6px;
+    left: -33px;
+    background: url('data:image/svg+xml;utf8,<svg width="134" height="194" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:0.33"/><stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:0"/></linearGradient></defs><g><path stroke="%23fff" d="m47,0L87,0L134,194L0,194Z" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="url(%23grad1)"/></g></svg>')
+}
+.prev {
+    position: absolute;
+    top: 154px;
+    left: 18px;
+}
+.next {
+    position: absolute;
+    top: 154px;
+    right: 18px;
+}
+
+:host(.decorated) .decor-shade {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 50px;
+    background-color: var(--shell-decor-shade-color-0);
+    transform: translate3d(105px, -2px, 0) skew(14deg);
+}
+
+:host(.decorated) .decor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: var(--shell-decor-background-color-0);
+    transform: translate3d(100px, -10px, 0) rotate(-7deg);
+}
+
+:host(.decorated) .decor:before,
+:host(.decorated) .decor:after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--shell-decor-background-color-1);
+    border-radius: 4px;
+    position: absolute;
+    top: 6px;
+}
+
+:host(.decorated) .decor:before {
+    left: 6px;
+}
+
+:host(.decorated) .decor:after {
+    right: 6px;
+}
