@@ -15,8 +15,7 @@ class Header extends React.Component {
                         </h1>
                     </div>
                     <div className="headerElement">
-                        //
-                        <issie-search theme="blue" slot="end-bar"></issie-search>
+                        {/* <issie-search theme="blue" slot="end-bar"></issie-search>*/}
                     </div>
                 </div>
             </div>
