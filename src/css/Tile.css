@@ -160,3 +160,7 @@
 .tileImage {
     margin-top: 20px;
 }
+
+.tileFont {
+    color: black;
+}

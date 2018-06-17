@@ -7,9 +7,6 @@ import { bindActionCreators } from "redux";
 
 import PropTypes from "prop-types";
 
-/*<elix-autosize-textarea minimum-rows="2" placeholder="Type all you want here!">
- </elix-autosize-textarea>*/
-
 class App extends Component {
     render() {
         return (

@@ -9,7 +9,7 @@ const Tile = ({tileId, tileName, tileUrl, imageName}) => {
     return (
         <Link to={tileUrl}>
             <div className="fgTile">
-                <span>{tileName}</span>
+                <span className="rtl tileFont">{tileName}</span>
                 <div className="tileImage">
                     <img src={imageSrc} alt={tileName} width="70%" height="70%"/>
                 </div>
