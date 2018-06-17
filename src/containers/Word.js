@@ -12,7 +12,8 @@ class Word extends React.Component {
         mainJson.categories.map((category) => {
             if (category.id === wordId && category.words) {
                 wordsElements = category.words.map((word) => {
-                    return <Tile key={word.id} tileName={word.name} tileUrl={"/video/" + word.videoName} imageName={word.imageName}/>
+                    return <Tile key={word.id} tileName={word.name} tileUrl={"/video/" + word.videoName}
+                                 imageName={word.imageName}/>
                 })
             }
             return <div></div>

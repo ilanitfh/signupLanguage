@@ -8,16 +8,15 @@ class Header extends React.Component {
             <div>
                 <div className="App-header">
                     <div className="headerElement">
-                    <button className="zmdi zmdi-info-outline"/>
-                    <button  className="zmdi zmdi-menu"/>
                     </div>
                     <div className="headerElement">
-                    <h1 className="App-title">
-                        שפת הסימנים - קטגוריות
-                    </h1>
+                        <h1 className="App-title">
+                            שפת הסימנים - קטגוריות
+                        </h1>
                     </div>
                     <div className="headerElement">
-                    <issie-search theme="blue" slot="end-bar"></issie-search>
+                        //
+                        <issie-search theme="blue" slot="end-bar"></issie-search>
                     </div>
                 </div>
             </div>

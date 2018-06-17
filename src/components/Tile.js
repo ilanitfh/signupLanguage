@@ -5,7 +5,7 @@ import "../css/Common.css";
 import {imageLocalCall} from "../apis/ImageLocalCall";
 
 const Tile = ({tileId, tileName, tileUrl, imageName}) => {
-    let imageSrc =  imageName ? imageLocalCall(imageName): "image1.png";
+    let imageSrc = imageName ? imageLocalCall(imageName) : "image1.png";
     return (
         <Link to={tileUrl}>
             <div className="fgTile">

@@ -8,7 +8,8 @@ class Body extends React.Component {
         let mainJson = jsonLocalCall("main");
 
         let tilesElements = mainJson.categories.map((category) =>
-            <Tile key={category.id} tileName={category.name} tileUrl={"/word/" + category.id} imageName={category.imageName} />);
+            <Tile key={category.id} tileName={category.name} tileUrl={"/word/" + category.id}
+                  imageName={category.imageName}/>);
         return (
             <div className="App-intro">
                 <div className="centerWidthAlign">

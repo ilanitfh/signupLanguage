@@ -1,3 +1,3 @@
 export default {
-    mainFields: { "fields": [], isLoaded: false }
+    mainFields: {"fields": [], isLoaded: false}
 };

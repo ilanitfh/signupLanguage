@@ -23,7 +23,7 @@ const getInitializersAndReducers = (config) => {
             reducers[name] = reducer;
         }
     }
-    return { reducers, initializers };
+    return {reducers, initializers};
 };
 
 
@@ -35,7 +35,7 @@ export default function configureStore(initialState) {
     const store = createStore(
         combineReducers(reducers),
         initialState,
-        composeWithDevTools (
+        composeWithDevTools(
             applyMiddleware(
                 /*createLogger(),*/
                 thunk

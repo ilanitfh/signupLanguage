@@ -7,7 +7,7 @@ import {videoLocalCall} from "../apis/VideoLocalCall";
 class Video extends React.Component {
     render() {
         let videoName = this.props.routeParams.videoName;
-        let videoContent =  videoLocalCall(videoName);
+        let videoContent = videoLocalCall(videoName);
         return (
             <div className="App-intro">
                 <Player
