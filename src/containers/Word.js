@@ -1,7 +1,7 @@
 import React from "react";
 import '../css/App.css';
 import {jsonLocalCall} from "../apis/JsonLocalCall";
-import Tile from "../components/Tile";
+import Card from "../components/Card";
 
 class Word extends React.Component {
     render() {
@@ -12,7 +12,7 @@ class Word extends React.Component {
         mainJson.categories.map((category) => {
             if (category.id === wordId && category.words) {
                 wordsElements = category.words.map((word) => {
-                    return <Tile key={word.id} tileName={word.name} tileUrl={"/video/" + word.videoName}
+                    return <Card key={word.id} cardName={word.name} cardUrl={"/video/" + word.videoName}
                                  imageName={word.imageName}/>
                 })
             }
