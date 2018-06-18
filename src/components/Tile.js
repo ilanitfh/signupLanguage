@@ -8,15 +8,11 @@ const Tile = ({tileId, tileName, tileUrl, imageName}) => {
     let imageSrc = imageName ? imageLocalCall(imageName) : "image1.png";
     return (
         <Link to={tileUrl}>
-            <div className="fgTile">
-
-                <issie-box theme="blue" theme-flavor="13">
+                 <issie-box theme="blue" theme-flavor="13">
                     <h2 slot="title" className="rtl tileFont">{tileName}</h2>
                     <img slot="body" src="assets/category.png" alt="Category Placeholder"></img>
                     <img slot="decor-top" src="assets/r-cube.svg" alt="cube"></img>
                  </issie-box>
-
-            </div>
         </Link>
     );
 };
