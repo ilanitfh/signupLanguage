@@ -22,6 +22,9 @@ html,body,.fgAppHolder, .fgAppContainer {
     margin-top: 4px;
     background: linear-gradient(#def3f2, #dfe6e9);
     min-height: 100vh;
+    font-family: Alef-Regular, Arial, serif;
+    -webkit-font-smoothing: antialiased;
+    color: white;
 }
 
 
