@@ -9,10 +9,13 @@ const Tile = ({tileId, tileName, tileUrl, imageName}) => {
     return (
         <Link to={tileUrl}>
             <div className="fgTile">
-                <span className="rtl tileFont">{tileName}</span>
-                <div className="tileImage">
-                    <img src={imageSrc} alt={tileName} width="70%" height="70%"/>
-                </div>
+
+                <issie-box theme="blue" theme-flavor="13">
+                    <h2 slot="title" className="rtl tileFont">{tileName}</h2>
+                     <img slot="body" src="assets/category.png" alt="Category Placeholder"></img>
+                     <img slot="decor-top" src="assets/r-cube.svg" alt="cube"></img>
+                 </issie-box>
+
             </div>
         </Link>
     );

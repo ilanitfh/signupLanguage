@@ -16,6 +16,9 @@ class Video extends React.Component {
                     src={videoContent}
                     autoPlay={true}
                 />
+                <div>
+                
+                </div>
             </div>
         )
     }
