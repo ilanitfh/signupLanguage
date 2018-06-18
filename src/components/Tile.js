@@ -12,7 +12,7 @@ const Tile = ({tileId, tileName, tileUrl, imageName}) => {
                         <issie-shelf slot="title" >
                 <issie-box theme="blue" theme-flavor="13">
                     <h2 slot="title" className="rtl tileFont">{tileName}</h2>
-                    <img slot="body" src={imageSrc} alt="Category Placeholder" width="100%" height="100%"></img>
+                    <img slot="body" className="tileImg" src={imageSrc} alt="Category Placeholder"></img>
                 </issie-box>
                             </issie-shelf>
             </div>

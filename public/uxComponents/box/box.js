@@ -9,7 +9,7 @@
                 <div></div>
             </header>
             <main>
-                <div>
+                <div class="bodyStyle">
                     <slot name="body"></slot>
                 </div>
             </main>

@@ -1,7 +1,7 @@
 import React from "react";
 import '../css/App.css';
 import "../../node_modules/video-react/dist/video-react.css";
-import { Player } from 'video-react';
+//import { Player } from 'video-react';
 import {videoLocalCall} from "../apis/VideoLocalCall";
 
 class Video extends React.Component {
