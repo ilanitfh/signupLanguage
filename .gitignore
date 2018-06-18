@@ -2,6 +2,9 @@
 node_modules/
 .DS_Store
 .vscode/
+build
+cordova/IsraeliSignLanguage/platforms/
+cordova/IsraeliSignLanguage/www/
 
 # Mac
 .DS_Store
