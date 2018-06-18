@@ -33,8 +33,8 @@ for (var i=0; items && i<items.length; i++) {
                     word.name = words[j];
                     word.id = fileIndex;
                     fileIndex++;
-                    word.imageName = word.name + ".png";
-                    word.videoName = word.name + ".mov";
+                    word.imageName = word.name.replace(".mov", ".png");
+                    word.videoName = word.name.replace(".mov", "_x264.mov");
                     category.words.push(word);
                 }
             }
