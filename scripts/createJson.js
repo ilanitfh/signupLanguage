@@ -54,6 +54,6 @@ for (var i=0; items && i<items.length; i++) {
 
 fs.open(targetFile, 'w', function (err, file) {
     if (err) throw err;
-    fs.write(file, JSON.stringify(res, null, 2));
-    fs.close(file);
+    fs.writeSync(file, JSON.stringify(res, null, 2));
+    fs.closeSync(file);
   });
