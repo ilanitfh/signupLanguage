@@ -12,7 +12,6 @@ const Tile = ({tileId, tileName, tileUrl, imageName}) => {
                 <issie-box theme="blue" theme-flavor="13">
                     <h2 slot="title" className="rtl tileFont">{tileName}</h2>
                     <img slot="body" src={imageSrc} alt="Category Placeholder" width="100%" height="100%"></img>
-                    <img slot="decor-top" src="assets/r-cube.svg" alt="cube"></img>
                 </issie-box>
             </div>
         </Link>
