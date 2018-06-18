@@ -2,6 +2,7 @@
   "name": "sign-language",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "devDependencies": {
     "eslint": "^3.17.1",
     "eslint-plugin-react": "^6.10.0",
