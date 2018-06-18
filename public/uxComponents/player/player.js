@@ -30,6 +30,8 @@
             this.prev = node.querySelector('.prev');
             this.next = node.querySelector('.next');
             this.attachShadow({mode: 'closed'}).appendChild(node);
+            this.video.autoplay = true;
+            this.video.controls = true;
         }
         connectedCallback() {
             videoAttributes.forEach(attr => {
