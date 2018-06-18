@@ -20,9 +20,14 @@ class Word extends React.Component {
         });
 
         return (
-            <div className="App-intro">
-                {wordsElements}
-            </div>
+        <div className="App-intro">
+                        <div className="centerWidthAlign">
+                            <div className="fgTileContainer ">
+                                {wordsElements}
+                            </div>
+                        </div>
+                    </div>
+
         )
     }
 }
