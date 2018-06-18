@@ -5,20 +5,13 @@ import '../css/style.css';
 class Header extends React.Component {
     render() {
         return (
-            <div>
-                <div className="App-header">
-                    <div className="headerElement">
-                    </div>
-                    <div className="headerElement">
-                        <h1 className="App-title">
-                            שפת הסימנים - קטגוריות
-                        </h1>
-                    </div>
-                    <div className="headerElement">
-                        {/* <issie-search theme="blue" slot="end-bar"></issie-search>*/}
-                    </div>
-                </div>
-            </div>
+          <issie-shell theme="blue" id="page1" className="page">
+              <button slot="start-bar" className="zmdi zmdi-info-outline"></button>
+              <button slot="start-bar" className="zmdi zmdi-menu"></button>
+              <h1 slot="title">ספת הסימנים - קטגוריות</h1>
+              <issie-search theme="blue" slot="end-bar"></issie-search>
+
+          </issie-shell>
         )
     }
 }
