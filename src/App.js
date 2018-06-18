@@ -17,8 +17,11 @@ class App extends Component {
                              <button slot="start-bar" className="zmdi zmdi-menu"></button>
                              <h1 slot="title">ספת הסימנים - קטגוריות</h1>
                              <issie-search theme="blue" slot="end-bar"></issie-search>
+                              <issie-shelf theme="blue" slot="body">
+                                   {this.props.children}
+                                </issie-shelf>
                 </issie-shell>
-                {this.props.children}
+
             </div>
         );
     }
