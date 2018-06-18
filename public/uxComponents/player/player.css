@@ -48,6 +48,7 @@ main {
     max-height: 485px;
     min-height: 485px;
     background: var(--player-background-color-0);
+    z-index: 9999; margin-top: 170px;
 }
 
 video {

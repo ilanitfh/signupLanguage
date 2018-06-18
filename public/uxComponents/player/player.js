@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="${document.currentScript.getAttribute('src').replace('.js', '.css')}">
         <div class="player">
             <aside class="prev"></aside>
-            <main style="z-index: 9999">
+            <main>
                 <header></header>
                 <video playsinline><slot></slot></video>
                 <footer>
