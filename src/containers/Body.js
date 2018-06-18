@@ -9,7 +9,7 @@ class Body extends React.Component {
 
         let tilesElements = mainJson.categories.map((category) =>
             <Tile key={category.id} tileName={category.name} tileUrl={"/word/" + category.id}
-                  imageName={category.imageName}/>);
+                  imageName={category.imageName} themeFlavor={category.id}/>);
         return (
             <div className="App-intro">
                 <div className="centerWidthAlign">
