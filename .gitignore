@@ -5,6 +5,8 @@ node_modules/
 build
 cordova/IsraeliSignLanguage/platforms/
 cordova/IsraeliSignLanguage/www/
+package-lock.json
+cordova/IsraeliSignLanguage/config.xml
 
 # Mac
 .DS_Store
