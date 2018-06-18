@@ -1,41 +1,23 @@
 import React from "react";
 import { Link } from "react-router";
 import "../css/Tile.css";
-
-
-
-
-
+import "../css/Common.css";
 import {imageLocalCall} from "../apis/ImageLocalCall";
 
 const Tile = ({tileId, tileName, tileUrl, imageName}) => {
     let imageSrc = imageName ? imageLocalCall(imageName) : "image1.png";
     return (
+        <Link to={tileUrl}>
+            <div className="fgTile">
 
+                <issie-box theme="blue" theme-flavor="13">
+                    <h2 slot="title" className="rtl tileFont">{tileName}</h2>
+                    <img slot="body" src="assets/category.png" alt="Category Placeholder"></img>
+                    <img slot="decor-top" src="assets/r-cube.svg" alt="cube"></img>
+                 </issie-box>
 
-            <Link to={tileUrl}>
-            <div class="box">
-                <header>
-                    <span></span>
-                    <div></div>
-                </header>
-                <main>
-                    <div>
-                        <img src="assets/category.png" alt="Category Placeholder"></img>
-                    </div>
-                </main>
-                <footer>
-                    <a href={tileUrl}>{tileName}</a>
-                </footer>
-                <aside class="decor-bottom">
-
-                </aside>
-                <aside class="decor-top">
-                    <slot name="decor-top"></slot>
-                </aside>
             </div>
-            </Link>
-
-          );
+        </Link>
+    );
 };
 export default Tile;
