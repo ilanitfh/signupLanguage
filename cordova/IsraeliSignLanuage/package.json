@@ -1,0 +1,12 @@
+{
+    "name": "IsraeliSignLanguage",
+    "displayName": "The Israeli Sign Language",
+    "version": "1.0.0",
+    "description": "An app that help learning the sign language of Israel",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "SAP CSR Team",
+    "license": "Apache-2.0"
+}

@@ -28,6 +28,7 @@
 
 .App-intro {
   font-size: large;
+  padding-top: 150px;
 }
 
 @keyframes App-logo-spin {
@@ -42,4 +43,8 @@
 .headerElement {
   display:inline-block;
   child-align: left;
+}
+
+.tileBox {
+  height: 150px;
 }

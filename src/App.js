@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Header from "./components/Header";
 
 import './css/App.css';
+import './css/style.css';
 import {connect} from "react-redux";
 import { bindActionCreators } from "redux";
 
@@ -11,7 +11,12 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Header />
+                <issie-shell theme="blue" id="page1" className="page">
+                             <button slot="start-bar" className="zmdi zmdi-info-outline"></button>
+                             <button slot="start-bar" className="zmdi zmdi-menu"></button>
+                             <h1 slot="title">שפת הסימנים - קטגוריות</h1>
+                             <issie-search theme="blue" slot="end-bar"></issie-search>
+                </issie-shell>
                 {this.props.children}
             </div>
         );

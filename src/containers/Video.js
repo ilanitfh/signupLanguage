@@ -9,17 +9,15 @@ class Video extends React.Component {
         let videoName = this.props.routeParams.videoName;
         let videoContent = videoLocalCall(videoName);
         return (
-            <div className="App-intro">
-                <Player
-                    playsInline
-                    poster="/images/image.png"
-                    src={videoContent}
-                    autoPlay={true}
-                />
-                <div>
-                
-                </div>
-            </div>
+            <issie-player slot="body" theme="red" class="nav"
+                src={videoContent}
+                poster="assets/poster.png" />
+            //     <Player className="video"
+            //         playsInline
+            //         poster="/images/image.png"
+            //         src={videoContent}
+            //         autoPlay={true}
+            //     />
         )
     }
 }
