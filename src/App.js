@@ -9,6 +9,7 @@ import {jsonLocalCall} from "./apis/JsonLocalCall";
 import PropTypes from "prop-types";
 import {browserHistory} from "react-router";
 
+import {scrollLeft} from "./utils/Utils";
 class App extends Component {
     render() {
 
@@ -46,9 +47,32 @@ class App extends Component {
         let path = this.props.location.pathname;
         if(path !== "/") {
             backElement = <button slot="end-bar" className="zmdi zmdi-arrow-right"
+                                  onClick={() => browserHistory.goBack()}></button>
+        }
+
+        if(path.startsWith("/word")){
+            let categoryId = this.props.params.wordId;
+            categoryTheme=themeMap[categoryId];
+            title = mainJson.categories[categoryId-1].name;
+        }
+        let pageNum = 1;
+        function callScrollLeft() {
+            pageNum ++;
+            scrollLeft(pageNum);
+        }
+
+        function callScrollRight() {
+            if(pageNum > 0){
+                pageNum --;
+                scrollLeft(pageNum);
+            }
+        }
+
+        if(this.props.location.pathname !== "/") {
+            backElement = <button slot="end-bar" className="zmdi zmdi-arrow-right"
                               onClick={() => browserHistory.goBack()}></button>
         }
-        
+
         if(path.startsWith("/word")){
             let categoryId = this.props.params.wordId;
             categoryTheme=themeMap[categoryId];
@@ -61,8 +85,8 @@ class App extends Component {
                     <button slot="start-bar" className="zmdi zmdi-menu"></button>
                     <h1 slot="title">{title}</h1>
                     <issie-search theme={categoryTheme} slot="end-bar"></issie-search>
-                    <a slot="next" href="#page5"><img src="assets/arrow-right.svg" alt="arrow"/></a>
-                    <a slot="prev" href="#page5"><img src="assets/arrow-left.svg" alt="arrow"/></a>
+                    <a slot="next" onClick={callScrollLeft} id="scrollLeft" class="navBtn"><img src="assets/arrow-right.svg" alt="arrow"/></a>
+                    <a slot="prev" onClick={callScrollRight} id="scrollRight" class="navBtn"><img src="assets/arrow-left.svg" alt="arrow"/></a>
                     { backElement }
                 </issie-shell>
                 {this.props.children}

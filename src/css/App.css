@@ -55,3 +55,7 @@
   max-height: 100%;
   vertical-align: middle;
 }
+
+.navBtn {
+  z-index: 99999;
+}

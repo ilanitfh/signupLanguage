@@ -9,7 +9,11 @@
     flex-flow: row wrap;
     -webkit-align-content: flex-start;
     align-content: flex-start;
-    /*overflow: auto;*/
+    width: 2500px;
+    transition-duration: 2s;
+    transform: translateX(0px);
+    z-index: 1;
+
 }
 
 .centerWidthAlign {

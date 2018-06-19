@@ -120,11 +120,13 @@ main {
     position: absolute;
     top: 154px;
     left: 18px;
+    z-index: 99999;
 }
 .next {
     position: absolute;
     top: 154px;
     right: 18px;
+    z-index: 99999;
 }
 
 :host(.decorated) .decor-shade {
