@@ -22,6 +22,7 @@ render(
                 <IndexRoute component={Body} />
                 <Route path="/word/:wordId" component={Word} />
                 <Route path="/video/:videoName/:categoryId" component={Video} />
+               {/*  <Route path="/search/" component={SearchResult} />*/}
             </Route>
         </Router>
     </Provider>,
