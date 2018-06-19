@@ -22,6 +22,8 @@ class App extends Component {
                     <button slot="start-bar" className="zmdi zmdi-menu"></button>
                     <h1 slot="title">שפת הסימנים</h1>
                     <issie-search theme="blue" slot="end-bar"></issie-search>
+                    <a slot="next" href="#page5"><img src="assets/arrow-right.svg" alt="arrow"/></a>
+                    <a slot="prev" href="#page5"><img src="assets/arrow-left.svg" alt="arrow"/></a>
                     { backElement }
                 </issie-shell>
                 {this.props.children}
