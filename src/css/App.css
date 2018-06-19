@@ -65,3 +65,13 @@
     position: absolute;
 
 }
+searchClass {
+    display: inline-block;
+    border: none;
+    border-radius: 13px;
+    height: 26px;
+    width: 157px;
+    background-color: var(--search-background-color);
+    padding-left: 28px;
+    color: var(--search-text-color);
+}

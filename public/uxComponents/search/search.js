@@ -5,7 +5,7 @@
     issieSearchTemplate.innerHTML = `
         <link rel="stylesheet" href="${document.currentScript.getAttribute('src').replace('.js', '.css')}" />
         <div class="search">
-            <slot name="body"></slot>
+            <input type="search" />
         </div>
     `;
 

@@ -70,10 +70,9 @@ class App extends Component {
                     <button slot="start-bar" className="zmdi zmdi-info-outline"></button>
                     <button slot="start-bar" className="zmdi zmdi-menu"></button>
                     <h1 slot="title">{title}</h1>
-                    <issie-search theme="blue" slot="end-bar">
-                                         <input slot="body" type="search"  />
+                    <issie-search theme={categoryTheme} slot="end-bar">
                     </issie-search>
-                    <issie-search theme={categoryTheme} slot="end-bar"></issie-search>
+
                     {leftArrow}
                     {rightArrow}
                     { backElement }
