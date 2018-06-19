@@ -140,6 +140,7 @@
     --shell-main-background-color-1: #c1b7a1;
     --shelf-background-color: #a38f64;
     --payer-arrow-color: #19665c;
+    --search-background-color: #c1b7a1 ;
     /*--payer-lamp-color-1: #b8e986;*/
     --card-background-color-0: #2d9f8e;
     /*--shell-decor-background-color-1: #eb5a49;
@@ -159,6 +160,7 @@
     --card-background-color-0: #d6634e;
     --shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-2"] {
@@ -173,6 +175,7 @@
     --card-background-color-0: #f8ca73;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-3"] {
@@ -187,6 +190,7 @@
     --card-background-color-0: #7c97be;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-4"] {
@@ -201,6 +205,7 @@
     --card-background-color-0: #85d5ee;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-5"] {
@@ -215,6 +220,7 @@
     --card-background-color-0: #dd81aa;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-6"] {
@@ -229,6 +235,7 @@
     --card-background-color-0: #e0f33c;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-7"] {
@@ -243,6 +250,7 @@
     --card-background-color-0: #8d8d8d;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-8"] {
@@ -257,6 +265,7 @@
     --card-background-color-0: #fbef5f;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-9"] {
@@ -271,6 +280,7 @@
     --card-background-color-0: #9d8ab5;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-10"] {
@@ -285,6 +295,7 @@
     --card-background-color-0: #bd5a6c;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-11"] {
@@ -299,6 +310,7 @@
     --card-background-color-0: #98c867;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-12"] {
@@ -313,6 +325,7 @@
     --card-background-color-0: #ffe7c6;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-13"] {
@@ -327,6 +340,7 @@
     --card-background-color-0: #fa8071;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-14"] {
@@ -341,6 +355,7 @@
     --card-background-color-0: #7f8000;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-15"] {
@@ -355,6 +370,7 @@
     --card-background-color-0: #61676c;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-16"] {
@@ -369,6 +385,7 @@
     --card-background-color-0: #fc66b2;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-17"] {
@@ -383,6 +400,7 @@
     --card-background-color-0: #4c70da;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-18"] {
@@ -397,6 +415,7 @@
     --card-background-color-0: #f77e29;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-19"] {
@@ -411,6 +430,7 @@
     --card-background-color-0: #abd6d0;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-20"] {
@@ -425,6 +445,7 @@
     --card-background-color-0: #d6d8e7;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-21"] {
@@ -439,6 +460,7 @@
     --card-background-color-0: #36802d;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-22"] {
@@ -453,6 +475,7 @@
     --card-background-color-0: #f1c5c1;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 [theme="flavor-23"] {
@@ -467,6 +490,7 @@
     --card-background-color-0: #d8a67a;
     /*--shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;*/
+    --search-background-color: #c1b7a1 ;
 }
 
 
