@@ -37,17 +37,17 @@ class App extends Component {
             "21": "flavor-20",
             "22": "flavor-21",
             "23": "flavor-22",
-            "24": "flavor-23",
+            "24": "flavor-23"
         };
 
         let backElement = <div></div>;
-        let categoryTheme = "blue"
-        let title = "שפת הסימנים"
+        let categoryTheme = "blue";
+        let title = "שפת הסימנים";
         let mainJson = jsonLocalCall("main");
         let path = this.props.location.pathname;
         if(path !== "/") {
             backElement = <button slot="end-bar" className="zmdi zmdi-arrow-right"
-                                  onClick={() => browserHistory.goBack()}></button>
+                                  onClick={() => browserHistory.goBack()} />
         }
 
         if(path.startsWith("/word")){
@@ -57,8 +57,10 @@ class App extends Component {
         }
         let pageNum = 1;
         function callScrollLeft() {
-            pageNum ++;
-            scrollLeft(pageNum);
+            if(((pageNum+1)* 450) < 2000) {
+                pageNum++;
+                scrollLeft(pageNum);
+            }
         }
 
         function callScrollRight() {
@@ -66,11 +68,6 @@ class App extends Component {
                 pageNum --;
                 scrollLeft(pageNum);
             }
-        }
-
-        if(this.props.location.pathname !== "/") {
-            backElement = <button slot="end-bar" className="zmdi zmdi-arrow-right"
-                              onClick={() => browserHistory.goBack()}></button>
         }
 
         if(path.startsWith("/word")){
