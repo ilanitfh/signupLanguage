@@ -2,7 +2,32 @@ console.log("Start building JSON file for sign language app");
 
 var sourceFile = '/Users/i022021/dev/sign_lang/content'
 var targetFile = './sl.json'
-
+var colors = [
+    "#2d9f8e",
+    "#d95841",
+    "#f8ca73",
+    "#7c97be",
+    "#85d5ee",
+    "#dd81aa",
+    "#e0f33c",
+    "#8d8d8d",
+    "#fbef5f",
+    "#9d8ab5",
+    "#bd5a6c",
+    "#98c867",
+    "#ffe7c6",
+    "#fa8071",
+    "#7f8000",
+    "#61676c",
+    "#fc66b2",
+    "#4c70da",
+    "#f77e29",
+    "#abd6d0",
+    "#d6d8e7",
+    "#36802d",
+    "#f1c5c1",
+    "#d8a67a"
+]
 
 var fs = require('fs');
 
@@ -15,9 +40,10 @@ var items = fs.readdirSync(sourceFile);
 
 for (var i=0; items && i<items.length; i++) {
 //    console.log(items[i]);
-
+    var colorIndex = (i+1) % colors.length 
     let category = {};
     category.name = items[i];
+    category.color = colors[colorIndex];
     category.id = categoryIndex.toString();
     category.imageName = items[i] + ".png"
     category.words = []
