@@ -45,6 +45,8 @@ class App extends Component {
         let title = "שפת הסימנים";
         let mainJson = jsonLocalCall("main");
         let path = this.props.location.pathname;
+        let leftArrow = "";
+        let rightArrow = "";
         if(path !== "/") {
             backElement = <button slot="end-bar" className="zmdi zmdi-arrow-right"
                                   onClick={() => browserHistory.goBack()} />
@@ -75,6 +77,11 @@ class App extends Component {
             categoryTheme=themeMap[categoryId];
             title = mainJson.categories[categoryId-1].name;
         }
+
+        if(!path.startsWith("/video")) {
+            leftArrow =  <a slot="next" onClick={callScrollLeft} id="scrollLeft" class="navBtn"><img src="assets/arrow-right.svg" alt="arrow"/></a>
+            rightArrow = <a slot="prev" onClick={callScrollRight} id="scrollRight" class="navBtn"><img src="assets/arrow-left.svg" alt="arrow"/></a>
+        }
         return (
             <div className="App">
                 <issie-shell theme={categoryTheme} id="page1" className="page">
@@ -82,8 +89,8 @@ class App extends Component {
                     <button slot="start-bar" className="zmdi zmdi-menu"></button>
                     <h1 slot="title">{title}</h1>
                     <issie-search theme={categoryTheme} slot="end-bar"></issie-search>
-                    <a slot="next" onClick={callScrollLeft} id="scrollLeft" class="navBtn"><img src="assets/arrow-right.svg" alt="arrow"/></a>
-                    <a slot="prev" onClick={callScrollRight} id="scrollRight" class="navBtn"><img src="assets/arrow-left.svg" alt="arrow"/></a>
+                    {leftArrow}
+                    {rightArrow}
                     { backElement }
                 </issie-shell>
                 {this.props.children}
