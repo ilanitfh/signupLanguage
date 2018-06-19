@@ -10,7 +10,7 @@ class Word extends React.Component {
         let wordsElements;
 
         let themeMap = {
-            "1": "red",
+            "1": "flavor-0",
             "2": "blue"
         };
 
@@ -18,7 +18,7 @@ class Word extends React.Component {
             if (category.id === wordId && category.words) {
                 wordsElements = category.words.map((word) => {
                     return <Card key={word.id} cardName={word.name} cardUrl={"/video/" + word.videoName}
-                                 imageName={word.imageName} theme={themeMap[category.id]}/>
+                                 imageName={word.imageName} theme={"flavor-0"}/>
                 })
             }
             return <div></div>

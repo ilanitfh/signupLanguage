@@ -8,6 +8,8 @@
     --shell-main-background-color-1: #c1b7a1;
     --shelf-background-color: #a38f64;
     --payer-lamp-color-1: #b8e986;
+    --card-background-color-0: #6c97c0;
+    
 }
 
 [theme="blue"][theme-flavor="0"] {
@@ -130,7 +132,22 @@
     --box-background-color-1: #d8a67a;
 }
 
-[theme="red"] {
+[theme="flavor-0"] {
+    --shell-header-background-color-0: #19665c;
+    --shell-header-background-color-1: #2d9f8e;
+    --search-background-color: #19665c;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #19665c;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #2d9f8e;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+/* red renamed */
+[theme="flavor-1"] {
     --shell-header-background-color-0: #ae3d2a;
     --shell-header-background-color-1: #d95841;
     --search-background-color: #a94331;
@@ -143,6 +160,315 @@
     --shell-decor-background-color-1: #eb5a49;
     --shell-decor-shade-color-0: #ac432e;
 }
+
+[theme="flavor-2"] {
+    --shell-header-background-color-0: #f09533;
+    --shell-header-background-color-1: #f8ca73;
+    --search-background-color: #f09533;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #f09533;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #f8ca73;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-3"] {
+    --shell-header-background-color-0: #475d7f;
+    --shell-header-background-color-1: #7c97be;
+    --search-background-color: #475d7f;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #475d7f;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #7c97be;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-4"] {
+    --shell-header-background-color-0: #2c7e9c;
+    --shell-header-background-color-1: #85d5ee;
+    --search-background-color: #2c7e9c;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #2c7e9c;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #85d5ee;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-5"] {
+    --shell-header-background-color-0: #ab447a;
+    --shell-header-background-color-1: #dd81aa;
+    --search-background-color: #ab447a;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #ab447a;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #dd81aa;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-6"] {
+    --shell-header-background-color-0: #93aa3f;
+    --shell-header-background-color-1: #e0f33c;
+    --search-background-color: #93aa3f;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #93aa3f;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #e0f33c;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-7"] {
+    --shell-header-background-color-0: #494949;
+    --shell-header-background-color-1: #8d8d8d;
+    --search-background-color: #494949;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #494949;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #8d8d8d;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-8"] {
+    --shell-header-background-color-0: #c3b507;
+    --shell-header-background-color-1: #fbef5f;
+    --search-background-color: #c3b507;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #c3b507;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #fbef5f;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-9"] {
+    --shell-header-background-color-0: #503d6f;
+    --shell-header-background-color-1: #9d8ab5;
+    --search-background-color: #503d6f;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #503d6f;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #9d8ab5;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-10"] {
+    --shell-header-background-color-0: #7a2242;
+    --shell-header-background-color-1: #bd5a6c;
+    --search-background-color: #7a2242;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #7a2242;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #bd5a6c;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-11"] {
+    --shell-header-background-color-0: #649736;
+    --shell-header-background-color-1: #98c867;
+    --search-background-color: #649736;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #649736;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #98c867;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-12"] {
+    --shell-header-background-color-0: #e1bb96;
+    --shell-header-background-color-1: #ffe7c6;
+    --search-background-color: #e1bb96;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #e1bb96;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #ffe7c6;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-13"] {
+    --shell-header-background-color-0: #e79579;
+    --shell-header-background-color-1: #fa8071;
+    --search-background-color: #e79579;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #e79579;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #fa8071;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-14"] {
+    --shell-header-background-color-0: #55560d;
+    --shell-header-background-color-1: #7f8000;
+    --search-background-color: #55560d;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #55560d;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #7f8000;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-15"] {
+    --shell-header-background-color-0: #181a1c;
+    --shell-header-background-color-1: #61676c;
+    --search-background-color: #181a1c;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #181a1c;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #61676c;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-16"] {
+    --shell-header-background-color-0: #e92c7e;
+    --shell-header-background-color-1: #fc66b2;
+    --search-background-color: #e92c7e;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #e92c7e;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #fc66b2;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-17"] {
+    --shell-header-background-color-0: #2346c1;
+    --shell-header-background-color-1: #4c70da;
+    --search-background-color: #2346c1;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #2346c1;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #4c70da;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-18"] {
+    --shell-header-background-color-0: #c65404;
+    --shell-header-background-color-1: #f77e29;
+    --search-background-color: #c65404;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #c65404;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #f77e29;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-19"] {
+    --shell-header-background-color-0: #3ab4a3;
+    --shell-header-background-color-1: #abd6d0;
+    --search-background-color: #3ab4a3;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #3ab4a3;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #abd6d0;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-20"] {
+    --shell-header-background-color-0: #b3accb;
+    --shell-header-background-color-1: #d6d8e7;
+    --search-background-color: #b3accb;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #b3accb;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #d6d8e7;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-21"] {
+    --shell-header-background-color-0: #234d20;
+    --shell-header-background-color-1: #36802d;
+    --search-background-color: #234d20;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #234d20;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #36802d;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-22"] {
+    --shell-header-background-color-0: #cd847d;
+    --shell-header-background-color-1: #f1c5c1;
+    --search-background-color: #cd847d;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #cd847d;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #f1c5c1;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
+[theme="flavor-23"] {
+    --shell-header-background-color-0: #8b572a;
+    --shell-header-background-color-1: #d8a67a;
+    --search-background-color: #8b572a;
+    --shell-main-background-color-0: #fdfaf4;
+    --shell-main-background-color-1: #c1b7a1;
+    --shelf-background-color: #a38f64;
+    --payer-arrow-color: #8b572a;
+    /*--payer-lamp-color-1: #b8e986;*/
+    --card-background-color-0: #d8a67a;
+    /*--shell-decor-background-color-1: #eb5a49;
+    --shell-decor-shade-color-0: #ac432e;*/
+}
+
 
 /* FONTS */
 

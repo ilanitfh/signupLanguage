@@ -9,7 +9,7 @@ class Video extends React.Component {
         let videoName = this.props.routeParams.videoName;
         let videoContent = videoLocalCall(videoName);
         return (
-            <issie-player slot="body" theme="red" class="nav"
+            <issie-player slot="body" theme="flavor-1" class="nav"
                 src={videoContent}
                 poster="assets/poster.png" />
             //     <Player className="video"
