@@ -21,26 +21,7 @@
     <script src="uxComponents/player/player.js"></script>
     <script src="uxComponents/split/split.js"></script>
     <script>
-
-
-    function preventDefault(e) {
-    e = e || window.event;
-    if (e.preventDefault)
-    e.preventDefault();
-    e.returnValue = false;
-    }
-
-
-    function disableScroll() {
-        window.onwheel = preventDefault; // modern standard
-        window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-        window.ontouchmove  = preventDefault; // mobile
-    }
-
-
-
-    disableScroll();
-
+        document.ontouchmove = function(e){ e.preventDefault(); }
     </script>
 </head>
 
