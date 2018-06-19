@@ -9,11 +9,16 @@ class Word extends React.Component {
         let wordId = this.props.routeParams.wordId;
         let wordsElements;
 
+        let themeMap = {
+            "1": "red",
+            "2": "blue"
+        };
+
         mainJson.categories.map((category) => {
             if (category.id === wordId && category.words) {
                 wordsElements = category.words.map((word) => {
                     return <Card key={word.id} cardName={word.name} cardUrl={"/video/" + word.videoName}
-                                 imageName={word.imageName} theme={"red"}/>
+                                 imageName={word.imageName} theme={themeMap[category.id]}/>
                 })
             }
             return <div></div>

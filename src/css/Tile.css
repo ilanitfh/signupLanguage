@@ -9,6 +9,7 @@
     flex-flow: row wrap;
     -webkit-align-content: flex-start;
     align-content: flex-start;
+    /*overflow: auto;*/
 }
 
 .centerWidthAlign {
