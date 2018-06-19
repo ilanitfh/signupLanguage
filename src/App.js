@@ -9,36 +9,11 @@ import {jsonLocalCall} from "./apis/JsonLocalCall";
 import PropTypes from "prop-types";
 import {browserHistory} from "react-router";
 
-import {scrollLeft} from "./utils/Utils";
+import {scrollLeft, themeMap} from "./utils/Utils";
 class App extends Component {
     render() {
 
-        let themeMap = {
-            "1": "flavor-0",
-            "2": "flavor-1",
-            "3": "flavor-2",
-            "4": "flavor-3",
-            "5": "flavor-4",
-            "6": "flavor-5",
-            "7": "flavor-6",
-            "8": "flavor-7",
-            "9": "flavor-8",
-            "10": "flavor-9",
-            "11": "flavor-10",
-            "12": "flavor-11",
-            "13": "flavor-12",
-            "14": "flavor-13",
-            "15": "flavor-14",
-            "16": "flavor-15",
-            "17": "flavor-16",
-            "18": "flavor-17",
-            "19": "flavor-18",
-            "20": "flavor-19",
-            "21": "flavor-20",
-            "22": "flavor-21",
-            "23": "flavor-22",
-            "24": "flavor-23"
-        };
+
 
         let backElement = <div></div>;
         let categoryTheme = "blue";
@@ -57,6 +32,13 @@ class App extends Component {
             categoryTheme=themeMap[categoryId];
             title = mainJson.categories[categoryId-1].name;
         }
+
+        if(path.startsWith("/video")){
+            let categoryId = this.props.params.categoryId;
+            categoryTheme = themeMap[categoryId];
+            title = mainJson.categories[categoryId-1].name;
+        }
+
         let pageNum = 1;
         function callScrollLeft() {
             if(((pageNum+1)* 450) < 2000) {
@@ -79,8 +61,8 @@ class App extends Component {
         }
 
         if(!path.startsWith("/video")) {
-            leftArrow =  <a slot="next" onClick={callScrollLeft} id="scrollLeft" class="navBtn"><img src="assets/arrow-right.svg" alt="arrow"/></a>
-            rightArrow = <a slot="prev" onClick={callScrollRight} id="scrollRight" class="navBtn"><img src="assets/arrow-left.svg" alt="arrow"/></a>
+            leftArrow =  <a slot="next" onClick={callScrollLeft} id="scrollLeft" className="navBtn"><img src="assets/arrow-right.svg" alt="arrow"/></a>
+            rightArrow = <a slot="prev" onClick={callScrollRight} id="scrollRight" className="navBtn"><img src="assets/arrow-left.svg" alt="arrow"/></a>
         }
         return (
             <div className="App">

@@ -21,7 +21,7 @@ render(
             <Route path="/" component={App} >
                 <IndexRoute component={Body} />
                 <Route path="/word/:wordId" component={Word} />
-                <Route path="/video/:videoName" component={Video} />
+                <Route path="/video/:videoName/:categoryId" component={Video} />
             </Route>
         </Router>
     </Provider>,
