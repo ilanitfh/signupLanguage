@@ -9,7 +9,7 @@ const Card = ({cardId, cardName, cardUrl, imageName, theme}) => {
         <Link to={cardUrl}>
             <div className="card">
                 <issie-rope slot="title" >
-                    <issie-card theme={theme}>
+                    <issie-card theme={theme} class="pin">
                         <h2 slot="title" className="rtl tileFont">{cardName}</h2>
                         <img slot="body" className="tileImg" src={imageSrc} alt="card Placeholder"></img>
                     </issie-card>
