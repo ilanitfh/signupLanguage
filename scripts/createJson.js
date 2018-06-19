@@ -1,7 +1,9 @@
 console.log("Start building JSON file for sign language app");
 
-var sourceFile = '/Users/i022021/dev/sign_lang/content'
-var targetFile = './sl.json'
+var sourceFile = '../../../ContentNew'
+var targetFile = '../src/jsons/main.json'
+var imagePath = '../src/images/'
+var videoPath = '../src/videos/'
 var colors = [
     "#2d9f8e",
     "#d95841",
@@ -43,7 +45,7 @@ for (var i=0; items && i<items.length; i++) {
     var colorIndex = (i+1) % colors.length 
     let category = {};
     category.name = items[i];
-    category.color = colors[colorIndex];
+    //category.color = colors[colorIndex];
     category.id = categoryIndex.toString();
     category.imageName = items[i] + ".png"
     category.words = []
@@ -69,13 +71,19 @@ for (var i=0; items && i<items.length; i++) {
                     word.id = fileIndex;
                     fileIndex++;
                     word.imageName = words[j].replace(suffix, ".png");
-                    //test image exists
-                    var imagePath = sourceFile + '/' + category.name + "/סמלים/" + word.imageName
-                    if (!fs.existsSync(imagePath)) {
-                        console.log("missing: " , category.name, " - ", word.imageName);
+                    //test files exists
+                    var pathToTest = imagePath + word.imageName
+                    if (!fs.existsSync(pathToTest)) {
+                        console.log("missing image: '" + category.name+ "' - '"+ word.imageName + "'");
                         word.imageName = "no_image.png"
                     }
                     word.videoName = words[j].replace(suffix, "_x264.mov");
+                    
+                    pathToTest = videoPath + word.videoName
+                    if (!fs.existsSync(pathToTest)) {
+                        console.log("missing video: '" +  word.videoName+ "'");
+                    }
+
                     category.words.push(word);
                 }
             }
@@ -84,7 +92,7 @@ for (var i=0; items && i<items.length; i++) {
 
         res.categories.push(category);
     } catch(e){
-        console.log(e)
+        //console.log(e)
     }
     
     
