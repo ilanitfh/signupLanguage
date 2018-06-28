@@ -21,7 +21,10 @@
     <script src="uxComponents/player/player.js"></script>
     <script src="uxComponents/split/split.js"></script>
     <script>
-        document.ontouchmove = function(e){ e.preventDefault(); }
+        function doNothing(e) {
+            e.preventDefault(); 
+        }
+        document.addEventListener("touchmove", doNothing, {passive:false});
     </script>
 </head>
 

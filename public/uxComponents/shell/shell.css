@@ -96,6 +96,7 @@ main {
     padding: 0 135px;
     position: relative;
     z-index: 1;
+    pointer-events: none;
 }
 .projectors > li {
     flex-shrink: 0;

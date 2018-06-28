@@ -22,10 +22,9 @@ class App extends Component {
         let path = this.props.location.pathname;
         let leftArrow = "";
         let rightArrow = "";
-        if(path !== "/") {
-            backElement = <button slot="end-bar" className="zmdi zmdi-arrow-right"
-                                  onClick={() => browserHistory.goBack()} />
-        }
+        backElement = <button slot="end-bar" className="zmdi zmdi-arrow-right"
+                        onClick={() => browserHistory.goBack()} style={{visibility:(path !== "/" ? "visible":"hidden")}}/>
+       
 
         if(path.startsWith("/word")){
             let categoryId = this.props.params.wordId;
@@ -68,11 +67,11 @@ class App extends Component {
             <div className="App">
                 <issie-shell theme={categoryTheme} id="page1" className="page">
                     <button slot="start-bar" className="zmdi zmdi-info-outline"></button>
-                    <button slot="start-bar" className="zmdi zmdi-menu"></button>
+                    {/*<button slot="start-bar" className="zmdi zmdi-menu"></button>*/}
                     <h1 slot="title">{title}</h1>
                     <issie-search theme={categoryTheme} slot="end-bar">
                     </issie-search>
-
+ 
                     {leftArrow}
                     {rightArrow}
                     { backElement }
