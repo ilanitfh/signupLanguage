@@ -4,7 +4,7 @@
     issieShellTemplate.innerHTML = `
         <link rel="stylesheet" href="${document.currentScript.getAttribute('src').replace('.js', '.css')}">
         <header>
-            <div>
+            <div    style="vertical-align: center;">
                 <div class="start-bar">
                     <slot name="start-bar"></slot>
                 </div>

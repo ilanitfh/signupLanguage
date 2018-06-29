@@ -9,6 +9,8 @@ import App from './App';
 import Word from "./containers/Word";
 import Body from "./containers/Body";
 import Video from "./containers/Video";
+import Search from "./containers/Search";
+
 
 import configureStore from "./store/ConfigureStore";
 import { Provider } from "react-redux"; //We"ll use the Redux Provider to make the store available to any components that we choose to connect to it.
@@ -18,11 +20,11 @@ const store = configureStore();
 render(
     <Provider store={store}>
         <Router history={hashHistory}>
-            <Route path="/" component={App} >
+            <Route path="/" component={App} router={this} >
                 <IndexRoute component={Body} />
                 <Route path="/word/:wordId" component={Word} />
                 <Route path="/video/:videoName/:categoryId" component={Video} />
-               {/*  <Route path="/search/" component={SearchResult} />*/}
+                 <Route path="/search/:searchStr" component={Search} />
             </Route>
         </Router>
     </Provider>,

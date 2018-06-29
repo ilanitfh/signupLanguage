@@ -64,7 +64,7 @@ main {
 }
 ::slotted(button) {
     display: inline-block;
-    font-size: 24px !important;
+    font-size: 24px;
     width: 24px;
     height: 24px;
     text-align: center;
@@ -80,6 +80,7 @@ main {
     display: flex;
     justify-content: flex-end;
     min-width: 30%;
+ 
 }
 .title {
     position: relative;

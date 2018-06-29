@@ -186,7 +186,9 @@
 }
 
 .zmdi-arrow-right:before {
-    content: '\f2ee';
+    /*content: '\f2ee';*/
+    content: '\e015';
+    font-size: 35px;
 }
 
 /* GLOBAL STYLES */
