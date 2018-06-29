@@ -1,10 +1,43 @@
-export const scrollLeft = ((pageNum) => {
-    let step = -450* pageNum;
-    let stepPx = step + 'px';
-    let container = document.getElementsByClassName("fgTileContainer")[0];
 
-    container.style.transform = 'translateX(' +stepPx+ ')';
+export const scrollRight = (() => {
+    var curr = getTranslateX();
+    console.log("right from "+ curr);
+    setTranslateX(curr - getIncrement(curr, true))
 });
+
+export const scrollLeft = (() => {
+    var curr = getTranslateX();
+    var newVal = Number(curr) + getIncrement(curr);
+    console.log("left from "+ curr +" to " + newVal);
+    if (newVal > 0)
+        newVal = 0;
+
+    setTranslateX(newVal);
+});
+
+function getIncrement(curr, toRight) {
+    let container = document.getElementsByClassName("fgTileContainer")[0];
+    var inc =  container.parentNode.clientWidth  - 50;
+    if (toRight && curr-inc < container.clientWidth*-1)
+        return 0;
+    return inc;
+}
+
+function getTranslateX() {
+    let container = document.getElementsByClassName("fgTileContainer")[0];
+    let transform = container.style.transform;
+    if (transform) {
+        var transXRegex = /\.*translateX\((.*)px\)/i;
+        return Number(transXRegex.exec(transform)[1]);
+    }
+    return 0;
+}
+
+function setTranslateX(newVal) {
+    let container = document.getElementsByClassName("fgTileContainer")[0];
+    container.style.transform = 'translateX(' +newVal+ 'px)';
+}
+
 
 export const themeMap = {
     "1": "flavor-0",

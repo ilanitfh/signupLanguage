@@ -3258,18 +3258,21 @@
           "name": "ארוך וקצר",
           "id": 2202,
           "imageName": "ארוך וקצר.png",
+          "imageName2": "ארוך וקצר 2.png",
           "videoName": "ארוך וקצר_x264.mov"
         },
         {
           "name": "בפנים ובחוץ",
           "id": 2203,
           "imageName": "בפנים ובחוץ.png",
+          "imageName2": "בפנים ובחוץ 2.png",
           "videoName": "בפנים ובחוץ_x264.mov"
         },
         {
           "name": "גבוה ונמוך",
           "id": 2204,
           "imageName": "גבוה ונמוך.png",
+          "imageName2": "גבוה ונמוך 2.png",
           "videoName": "גבוה ונמוך_x264.mov"
         },
         {
@@ -3282,18 +3285,21 @@
           "name": "דומה ושונה",
           "id": 2206,
           "imageName": "דומה ושונה.png",
+          "imageName2": "דומה ושונה 2.png",
           "videoName": "דומה ושונה_x264.mov"
         },
         {
           "name": "הרבה וקצת",
           "id": 2207,
           "imageName": "הרבה וקצת.png",
+          "imageName2": "הרבה וקצת 2.png",
           "videoName": "הרבה וקצת_x264.mov"
         },
         {
           "name": "חם וקר",
           "id": 2208,
           "imageName": "חם וקר.png",
+          "imageName2": "חם וקר 2.png",
           "videoName": "חם וקר_x264.mov"
         },
         {
@@ -3324,18 +3330,21 @@
           "name": "יבש ורטוב",
           "id": 2213,
           "imageName": "יבש ורטוב.png",
+          "imageName2": "יבש ורטוב 2.png",
           "videoName": "יבש ורטוב_x264.mov"
         },
         {
           "name": "יפה ומכוער",
           "id": 2214,
           "imageName": "יפה ומכוער.png",
+          "imageName2": "יפה ומכוער 2.png",
           "videoName": "יפה ומכוער_x264.mov"
         },
         {
           "name": "ישן וחדש",
           "id": 2215,
           "imageName": "ישן וחדש.png",
+          "imageName2": "ישן וחדש 2.png",
           "videoName": "ישן וחדש_x264.mov"
         },
         {
@@ -3348,6 +3357,7 @@
           "name": "לאט ומהר",
           "id": 2217,
           "imageName": "לאט ומהר.png",
+          "imageName2": "לאט ומהר 2.png",
           "videoName": "לאט ומהר_x264.mov"
         },
         {
@@ -3360,18 +3370,21 @@
           "name": "למטה ולמעלה",
           "id": 2219,
           "imageName": "למטה ולמעלה.png",
+          "imageName2": "למטה ולמעלה 2.png",
           "videoName": "למטה ולמעלה_x264.mov"
         },
         {
           "name": "לפני ואחרי",
           "id": 2220,
           "imageName": "לפני ואחרי.png",
+          "imageName2": "לפני ואחרי 2.png",
           "videoName": "לפני ואחרי_x264.mov"
         },
         {
           "name": "מלא וריק",
           "id": 2221,
           "imageName": "מלא וריק.png",
+          "imageName2": "מלא וריק 2.png",
           "videoName": "מלא וריק_x264.mov"
         },
         {
@@ -3384,6 +3397,7 @@
           "name": "מלוכלך ונקי",
           "id": 2223,
           "imageName": "מלוכלך ונקי.png",
+          "imageName2": "מלוכלך ונקי 2.png",
           "videoName": "מלוכלך ונקי_x264.mov"
         },
         {
@@ -3426,12 +3440,14 @@
           "name": "קרוב ורחוק",
           "id": 2230,
           "imageName": "קרוב ורחוק.png",
+          "imageName2": "קרוב ורחוק 2.png",
           "videoName": "קרוב ורחוק_x264.mov"
         },
         {
           "name": "קשה ורך",
           "id": 2231,
           "imageName": "קשה ורך.png",
+          "imageName2": "קשה ורך 2.png",
           "videoName": "קשה ורך_x264.mov"
         },
         {
@@ -3444,6 +3460,7 @@
           "name": "שקט ורועש",
           "id": 2233,
           "imageName": "שקט ורועש.png",
+          "imageName2": "שקט ורועש 2.png",
           "videoName": "שקט ורועש_x264.mov"
         },
         {

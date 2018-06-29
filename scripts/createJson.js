@@ -71,12 +71,23 @@ for (var i=0; items && i<items.length; i++) {
                     word.id = fileIndex;
                     fileIndex++;
                     word.imageName = words[j].replace(suffix, ".png");
+                    
                     //test files exists
                     var pathToTest = imagePath + word.imageName
                     if (!fs.existsSync(pathToTest)) {
                         console.log("missing image: '" + category.name+ "' - '"+ word.imageName + "'");
                         word.imageName = "no_image.png"
                     }
+
+                    //check if opossite image exists:
+                    var pathToOpposite = pathToTest.replace(".png", " 2.png")
+                    if (fs.existsSync(pathToOpposite)) {
+                        word.imageName2 = word.imageName.replace(".png", " 2.png")
+                    }
+
+                    
+
+
                     word.videoName = words[j].replace(suffix, "_x264.mov");
                     
                     pathToTest = videoPath + word.videoName

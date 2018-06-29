@@ -10,15 +10,13 @@ import PropTypes from "prop-types";
 import {browserHistory} from "react-router";
 import SearchInput from "./components/SearchInput";
 
-import {scrollLeft, themeMap} from "./utils/Utils";
+import {scrollLeft, scrollRight, themeMap} from "./utils/Utils";
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {searchString:""};
         this.handleSearch = this.handleSearch.bind(this);
     }
-
-
 
     handleSearch(e) {
         if (e.target.value.length > 1
@@ -59,17 +57,15 @@ class App extends Component {
 
         let pageNum = 1;
         function callScrollLeft() {
-            if(((pageNum+1)* 450) < 2000) {
-                pageNum++;
-                scrollLeft(pageNum);
+            if (pageNum > 1) {
+                pageNum--;
+                scrollLeft();
             }
         }
 
         function callScrollRight() {
-            if(pageNum > 0){
-                pageNum --;
-                scrollLeft(pageNum);
-            }
+                pageNum++;
+                scrollRight();
         }
 
         if(path.startsWith("/word")){
@@ -79,8 +75,8 @@ class App extends Component {
         }
 
         if(!path.startsWith("/video")) {
-            leftArrow =  <a slot="next" onClick={callScrollLeft} id="scrollLeft" className="navBtn"><img src="assets/arrow-right.svg" alt="arrow"/></a>
-            rightArrow = <a slot="prev" onClick={callScrollRight} id="scrollRight" className="navBtn"><img src="assets/arrow-left.svg" alt="arrow"/></a>
+            leftArrow =  <a slot="next" onClick={callScrollRight} id="scrolRight" className="navBtn"><img src="assets/arrow-right.svg" alt="arrow"/></a>
+            rightArrow = <a slot="prev" onClick={callScrollLeft} id="scrollLeft" className="navBtn"><img src="assets/arrow-left.svg" alt="arrow"/></a>
         }
         console.log("render app");
         return (
