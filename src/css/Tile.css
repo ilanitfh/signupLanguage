@@ -10,6 +10,7 @@
     -webkit-align-content: flex-start;
     align-content: flex-start;
     width: 2500px;
+    height: 100%;
     transition-duration: 1.7s;
     z-index: 1;
 

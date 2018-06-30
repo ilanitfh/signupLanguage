@@ -16,10 +16,9 @@ class Word extends React.Component {
             let mainJson = jsonLocalCall("main");
             let wordId = this.props.routeParams.wordId;
             
-            mainJson.categories.map((category) => {
+            mainJson.categories.forEach((category) => {
                 if (category.id === wordId && category.words) {
                     state = {words:category.words, categoryId:category.id};
-                    return;
                 }
             });
 
@@ -39,10 +38,27 @@ class Word extends React.Component {
                                 imageName={word.imageName} imageName2={word.imageName2} theme={themeMap[this.state.categoryId]} />
             });
 
+        //calculate the average width, while considering double images
+        var elementWidths = this.state.words.map((word) => {
+            return word.imageName2 ? 300 : 220;
+        });
+        let widthSum = elementWidths.reduce(function(a, b) { return a + b; });
+        let tileW = widthSum / elementWidths.length;
+
+        //calculate best width:
+        let tileH = 200;
+        console.log("words: " + window.innerHeight);
+        let rows = Math.floor( (window.innerHeight - 110) / tileH);
+        let cols = Math.ceil(wordsElements.length / rows)
+        let width = cols * tileW;
+        console.log("words: rows:" + rows + "cols:" + cols);
+ 
+
+
         return (
         <div className="App-intro">
                         <div className="centerWidthAlign">
-                            <div className="fgTileContainer ">
+                            <div className="fgTileContainer" style={{width:width+"px"}}>
                                 {wordsElements}
                             </div>
                         </div>

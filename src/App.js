@@ -16,7 +16,9 @@ class App extends Component {
         super(props);
         this.state = {searchString:""};
         this.handleSearch = this.handleSearch.bind(this);
+        this.goBack = this.goBack.bind(this);
     }
+    
 
     handleSearch(e) {
         if (e.target.value.length > 1
@@ -32,6 +34,13 @@ class App extends Component {
         this.setState({searchString: e.target.value})
     }
 
+    goBack() {
+        // clean the search bar
+        this.refs.searchInput.refs.input.value = "";
+
+        browserHistory.goBack();
+    }
+
     render() {
         let categoryTheme = "blue";
         let title = "שפת הסימנים";
@@ -40,7 +49,7 @@ class App extends Component {
         let leftArrow = "";
         let rightArrow = "";
         let backElement = <button slot="end-bar" className="zmdi zmdi-arrow-right"
-                        onClick={() => browserHistory.goBack()} style={{width:"15%" , visibility:(path !== "/" ? "visible":"hidden")}}/>
+                        onClick={this.goBack} style={{width:"15%" , visibility:(path !== "/" ? "visible":"hidden")}}/>
        
 
         if(path.startsWith("/word")){
@@ -78,14 +87,13 @@ class App extends Component {
             leftArrow =  <a slot="next" onClick={callScrollRight} id="scrolRight" className="navBtn"><img src="assets/arrow-right.svg" alt="arrow"/></a>
             rightArrow = <a slot="prev" onClick={callScrollLeft} id="scrollLeft" className="navBtn"><img src="assets/arrow-left.svg" alt="arrow"/></a>
         }
-        console.log("render app");
         return (
             <div className="App">
                 <issie-shell theme={categoryTheme} id="page1" className="page">
                     <button slot="start-bar" className="zmdi zmdi-info-outline"></button>
                     {/*<button slot="start-bar" className="zmdi zmdi-menu"></button>*/}
                     <h1 slot="title">{title}</h1>
-                    <SearchInput theme={categoryTheme} slot="end-bar" onChange={this.handleSearch}/>
+                    <SearchInput theme={categoryTheme} slot="end-bar" onChange={this.handleSearch} ref="searchInput"/>
  
                     {leftArrow}
                     {rightArrow}

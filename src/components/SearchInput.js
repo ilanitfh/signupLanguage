@@ -14,7 +14,7 @@ class SearchInput extends React.Component {
     render() {
         return (
             <div className="search" slot={this.props.slot}>
-                <input type="search" onChange={this.handleChange}/>
+                <input ref="input" type="search" onChange={this.handleChange}/>
             </div>
         );
     }

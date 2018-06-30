@@ -1,26 +1,32 @@
 
 export const scrollRight = (() => {
     var curr = getTranslateX();
-    console.log("right from "+ curr);
     setTranslateX(curr - getIncrement(curr, true))
 });
 
 export const scrollLeft = (() => {
     var curr = getTranslateX();
     var newVal = Number(curr) + getIncrement(curr);
-    console.log("left from "+ curr +" to " + newVal);
     if (newVal > 0)
         newVal = 0;
 
     setTranslateX(newVal);
 });
 
+
 function getIncrement(curr, toRight) {
     let container = document.getElementsByClassName("fgTileContainer")[0];
     var inc =  container.parentNode.clientWidth  - 50;
-    if (toRight && curr-inc < container.clientWidth*-1)
+    if (inc >= container.clientWidth)
         return 0;
-    return inc;
+
+    if (toRight) {
+        var rightHidden = (container.clientWidth - inc) + curr;
+        return Math.min(inc, rightHidden);
+    } else {
+        var leftHidden =  container.clientWidth - curr - inc;
+        return Math.min(inc, leftHidden);
+    }
 }
 
 function getTranslateX() {
