@@ -2,7 +2,7 @@ import React from "react";
 import '../css/App.css';
 import {jsonLocalCall} from "../apis/JsonLocalCall";
 import Card from "../components/Card";
-import {themeMap} from "../utils/Utils";
+import {themeMap, wordsTranslateX} from "../utils/Utils";
 
 class Word extends React.Component {
     constructor(props){
@@ -47,18 +47,16 @@ class Word extends React.Component {
 
         //calculate best width:
         let tileH = 200;
-        console.log("words: " + window.innerHeight);
         let rows = Math.floor( (window.innerHeight - 110) / tileH);
         let cols = Math.ceil(wordsElements.length / rows)
         let width = cols * tileW;
-        console.log("words: rows:" + rows + "cols:" + cols);
  
 
 
         return (
         <div className="App-intro">
                         <div className="centerWidthAlign">
-                            <div className="fgTileContainer" style={{width:width+"px"}}>
+                            <div className="fgTileContainer" style={{width:width+"px", transform:'translateX(' + wordsTranslateX + 'px)'}}>
                                 {wordsElements}
                             </div>
                         </div>

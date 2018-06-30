@@ -10,13 +10,17 @@ import PropTypes from "prop-types";
 import {browserHistory} from "react-router";
 import SearchInput from "./components/SearchInput";
 
-import {scrollLeft, scrollRight, themeMap} from "./utils/Utils";
+import {scrollLeft, scrollRight, themeMap, saveWordTranslateX, saveRootTranslateX} from "./utils/Utils";
+
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {searchString:""};
         this.handleSearch = this.handleSearch.bind(this);
         this.goBack = this.goBack.bind(this);
+        this.savePos = this.savePos.bind(this);
+        this.ScrollLeft = this.ScrollLeft.bind(this);
+        this.ScrollRight = this.ScrollRight.bind(this);
     }
     
 
@@ -40,6 +44,21 @@ class App extends Component {
 
         browserHistory.goBack();
     }
+    savePos (newVal) {
+        let path = this.props.location.pathname;
+        if (path.startsWith('/word')) {
+            saveWordTranslateX(newVal);
+        } else if (path == '/') {
+            saveRootTranslateX(newVal);
+        }
+    }
+    ScrollLeft() {
+        this.savePos(scrollLeft());
+    }
+
+    ScrollRight() {
+        this.savePos(scrollRight());
+    }
 
     render() {
         let categoryTheme = "blue";
@@ -52,6 +71,7 @@ class App extends Component {
                         onClick={this.goBack} style={{width:"15%" , visibility:(path !== "/" ? "visible":"hidden")}}/>
        
 
+        console.log("render app")
         if(path.startsWith("/word")){
             let categoryId = this.props.params.wordId;
             categoryTheme=themeMap[categoryId];
@@ -64,19 +84,6 @@ class App extends Component {
             title = mainJson.categories[categoryId-1].name;
         }
 
-        let pageNum = 1;
-        function callScrollLeft() {
-            if (pageNum > 1) {
-                pageNum--;
-                scrollLeft();
-            }
-        }
-
-        function callScrollRight() {
-                pageNum++;
-                scrollRight();
-        }
-
         if(path.startsWith("/word")){
             let categoryId = this.props.params.wordId;
             categoryTheme=themeMap[categoryId];
@@ -84,8 +91,8 @@ class App extends Component {
         }
 
         if(!path.startsWith("/video")) {
-            leftArrow =  <a slot="next" onClick={callScrollRight} id="scrolRight" className="navBtn"><img src="assets/arrow-right.svg" alt="arrow"/></a>
-            rightArrow = <a slot="prev" onClick={callScrollLeft} id="scrollLeft" className="navBtn"><img src="assets/arrow-left.svg" alt="arrow"/></a>
+            leftArrow =  <a slot="next" onClick={this.ScrollRight} id="scrolRight" className="navBtn"><img src="assets/arrow-right.svg" alt="arrow"/></a>
+            rightArrow = <a slot="prev" onClick={this.ScrollLeft} id="scrollLeft" className="navBtn"><img src="assets/arrow-left.svg" alt="arrow"/></a>
         }
         return (
             <div className="App">

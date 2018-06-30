@@ -1,7 +1,19 @@
 
+export var wordsTranslateX = 0;
+export var rootTranslateX = 0;
+
+export function saveWordTranslateX(newValue) {
+    wordsTranslateX = newValue;
+}
+export function saveRootTranslateX(newValue) {
+    rootTranslateX = newValue;
+}
+
 export const scrollRight = (() => {
     var curr = getTranslateX();
-    setTranslateX(curr - getIncrement(curr, true))
+    var newVal = curr - getIncrement(curr, true);
+    setTranslateX(newVal)
+    return newVal;
 });
 
 export const scrollLeft = (() => {
@@ -11,6 +23,7 @@ export const scrollLeft = (() => {
         newVal = 0;
 
     setTranslateX(newVal);
+    return newVal;
 });
 
 

@@ -2,6 +2,8 @@ import React from "react";
 import '../css/App.css';
 import {jsonLocalCall} from "../apis/JsonLocalCall";
 import Tile from "../components/Tile";
+import {rootTranslateX} from "../utils/Utils";
+
 
 class Body extends React.Component {
     render() {
@@ -20,7 +22,7 @@ class Body extends React.Component {
         return (
             <div className="App-intro">
                 <div className="centerWidthAlign">
-                    <div className="fgTileContainer" style={{width:width+"px"}}>
+                    <div className="fgTileContainer" style={{width:width+"px", transform:'translateX(' + rootTranslateX + 'px)'}}>
                         {tilesElements}
                     </div>
                 </div>
