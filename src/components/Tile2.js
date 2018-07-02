@@ -26,8 +26,7 @@ class Tile2 extends React.Component {
                             <div></div>
                         </header>
                         <main>
-                            <div class="bodyStyle"     
- >
+                            <div>
                                 <img  className="tileImg" src={imageSrc} alt="Category Placeholder"></img>
                             </div>
                         </main>

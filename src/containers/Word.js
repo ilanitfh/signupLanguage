@@ -42,17 +42,20 @@ class Word extends React.Component {
         var elementWidths = this.state.words.map((word) => {
             return word.imageName2 ? 300 : 220;
         });
-        let widthSum = elementWidths.reduce(function(a, b) { return a + b; });
-        let tileW = widthSum / elementWidths.length;
+        let width = 0;
+        if (elementWidths.length > 0) {
+            let widthSum = elementWidths.reduce(function(a, b) { return a + b; });
+            let tileW = widthSum / elementWidths.length;
 
-        //calculate best width:
-        let tileH = 200;
-        let rows = Math.floor( (window.innerHeight - 110) / tileH);
-        let cols = Math.ceil(wordsElements.length / rows)
-        let width = cols * tileW;
+            //calculate best width:
+            let tileH = 200;
+            let rows = Math.max(Math.floor( (window.innerHeight - 110) / tileH), 1);
+            let cols = Math.ceil(wordsElements.length / rows)
+            width = cols * tileW;
+        }
         width = Math.max(width, window.innerWidth);
 
-        console.log("h:"+window.innerHeight+ ", w:"+ window.innerWidth+ ", cols: "+ cols + ", rows:" + rows + ", width:"+width)
+ //       console.log("h:"+window.innerHeight+ ", w:"+ window.innerWidth+ ", cols: "+ cols + ", rows:" + rows + ", width:"+width)
 
         return (
         <div className="App-intro">

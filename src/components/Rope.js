@@ -3,12 +3,6 @@ import React from "react";
 import "../css/rope.css";
 
 class Rope extends React.Component {
-    constructor(props){
-        super(props);
-    }
-
-    //({cardId, cardName, cardUrl, imageName, imageName2, theme}) => {
-    
     render() {
         return (
             <div>

@@ -21,8 +21,29 @@ class App extends Component {
         this.savePos = this.savePos.bind(this);
         this.ScrollLeft = this.ScrollLeft.bind(this);
         this.ScrollRight = this.ScrollRight.bind(this);
+        this.updateDimensions = this.updateDimensions.bind(this);
     }
     
+    updateDimensions() {
+        //todo make the resize cause children to re-render
+        //probable implement shouldComponentUpdate on children
+        if (this.props.children && this.props.children.length>0) {
+            this.props.children[0].setState({width:window.innerWidth})
+            console.log("resize")
+        } else
+        console.log("resize no children")
+    }
+    
+    componentWillMount(){
+        this.updateDimensions();
+    }
+    componentDidMount() {
+        window.addEventListener("resize", this.updateDimensions);
+    } 
+
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.updateDimensions);
+    }
 
     handleSearch(e) {
         if (e.target.value.length > 1
@@ -52,7 +73,7 @@ class App extends Component {
         let path = this.props.location.pathname;
         if (path.startsWith('/word')) {
             saveWordTranslateX(newVal);
-        } else if (path == '/') {
+        } else if (path === '/') {
             saveRootTranslateX(newVal);
         }
     }

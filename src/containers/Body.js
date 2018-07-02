@@ -2,7 +2,6 @@ import React from "react";
 import '../css/App.css';
 import {jsonLocalCall} from "../apis/JsonLocalCall";
 import Tile2 from "../components/Tile2";
-import Tile from "../components/Tile";
 import {rootTranslateX} from "../utils/Utils";
 
 var tilesElements;
@@ -28,8 +27,8 @@ class Body extends React.Component {
         let tilesElements = this.state.tilesElements;
 
         //calculate best width:
-        let tileH = 220, tileW = 170;
-        let rows = Math.floor( (window.innerHeight - 110) / tileH);
+        let tileH = 175, tileW = 220;
+        let rows = Math.max(Math.floor( (window.innerHeight - 160) / tileH), 1);
         let cols = Math.ceil(tilesElements.length / rows)
         let width = cols * tileW;
 
