@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 import "../css/Tile.css";
-import "../css/Common.css";
+
 import {imageLocalCall} from "../apis/ImageLocalCall";
 
 const Tile = ({tileId, tileName, tileUrl, imageName, themeFlavor}) => {

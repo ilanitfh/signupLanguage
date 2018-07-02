@@ -41,7 +41,11 @@ class App extends Component {
     goBack() {
         // clean the search bar
         this.refs.searchInput.refs.input.value = "";
-
+        let path = this.props.location.pathname;
+        if (path.startsWith('/word')) {
+            //reset words position
+            saveWordTranslateX(0);
+        }
         browserHistory.goBack();
     }
     savePos (newVal) {

@@ -1,17 +1,14 @@
-:host {
+.boxhost {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     min-width: 124px;
     max-width: 124px;
-    --box-background-color-0: rgb(78,78,78);
-    --box-background-color-1: rgb(123,123,123);
     --box-background-color-2: rgb(255,255,255);
-    --box-text-color: rgb(255,255,255);
-    --box-text-color-compact: #393939;
-}
+ }
 
-.box {
+
+box {
     width: 100%;
     position: relative;
 }

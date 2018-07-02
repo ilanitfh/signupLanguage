@@ -1,17 +1,31 @@
 import React from "react";
 import '../css/App.css';
 import {jsonLocalCall} from "../apis/JsonLocalCall";
+import Tile2 from "../components/Tile2";
 import Tile from "../components/Tile";
 import {rootTranslateX} from "../utils/Utils";
 
-
+var tilesElements;
 class Body extends React.Component {
-    render() {
-        let mainJson = jsonLocalCall("main");
+    constructor(props){
+        super(props);
 
-        let tilesElements = mainJson.categories.map((category) =>
-            <Tile key={category.id} tileName={category.name} tileUrl={"/word/" + category.id}
-                  imageName={category.imageName} themeFlavor={category.id-1}/>);
+        let mainJson = jsonLocalCall("main");
+        if (!tilesElements) {
+            tilesElements = mainJson.categories.map((category) =>
+                <Tile2 key={category.id} tileName={category.name} tileUrl={"/word/" + category.id}
+                    imageName={category.imageName} themeFlavor={category.id-1}/>);
+                console.log("recalc body")
+        }
+ 
+        this.state = {tilesElements: tilesElements}
+        console.log("constructor body")
+    }
+
+
+    render() {
+
+        let tilesElements = this.state.tilesElements;
 
         //calculate best width:
         let tileH = 220, tileW = 170;

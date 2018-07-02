@@ -1,4 +1,4 @@
-:host {
+.shelfhost {
     --shelf-background-color: #a38f64;
     display: flex;
     flex-direction: column-reverse;
@@ -7,11 +7,11 @@
 .container {
     display: flex;
     flex-direction:  row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
     height: 140px;
     margin: 0;
-    padding: 0 34px;
+
 }
 
 ::slotted(*) {
@@ -22,6 +22,7 @@
 .shelf {
     position: relative;
     height: 25px;
+    width: 170px;
     background-color: var(--shelf-background-color);
 }
 
@@ -50,11 +51,3 @@
     background-image: linear-gradient(45deg, rgba(73,73,73,0.2), rgba(73,73,73,0));
 }
 
-:host(.compact) .shelf {
-    height: 13px;
-}
-
-:host(.compact) .container {
-    height: 128px;
-    padding: 0 10px;
-}

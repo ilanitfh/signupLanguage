@@ -1,7 +1,7 @@
 import React from "react";
 import '../css/App.css';
 import {jsonLocalCall} from "../apis/JsonLocalCall";
-import Card from "../components/Card";
+import Card2 from "../components/Card2";
 import {themeMap, wordsTranslateX} from "../utils/Utils";
 
 class Word extends React.Component {
@@ -34,7 +34,7 @@ class Word extends React.Component {
 
     render() {
         var wordsElements = this.state.words.map((word) => {
-                return <Card key={word.id} cardName={word.name} cardUrl={"/video/" + word.videoName + "/" + this.state.categoryId}
+                return <Card2 key={word.id} cardName={word.name} cardUrl={"/video/" + word.videoName + "/" + this.state.categoryId}
                                 imageName={word.imageName} imageName2={word.imageName2} theme={themeMap[this.state.categoryId]} />
             });
 
@@ -50,17 +50,18 @@ class Word extends React.Component {
         let rows = Math.floor( (window.innerHeight - 110) / tileH);
         let cols = Math.ceil(wordsElements.length / rows)
         let width = cols * tileW;
- 
+        width = Math.max(width, window.innerWidth);
 
+        console.log("h:"+window.innerHeight+ ", w:"+ window.innerWidth+ ", cols: "+ cols + ", rows:" + rows + ", width:"+width)
 
         return (
         <div className="App-intro">
-                        <div className="centerWidthAlign">
-                            <div className="fgTileContainer" style={{width:width+"px", transform:'translateX(' + wordsTranslateX + 'px)'}}>
-                                {wordsElements}
-                            </div>
-                        </div>
-                    </div>
+            <div className="centerWidthAlign">
+                <div className="fgTileContainer" style={{width:width+"px", transform:'translateX(' + wordsTranslateX + 'px)'}}>
+                    {wordsElements}
+                </div>
+            </div>
+        </div>
 
         )
     }
