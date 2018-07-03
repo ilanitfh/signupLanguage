@@ -14,11 +14,9 @@ class Body extends React.Component {
             tilesElements = mainJson.categories.map((category) =>
                 <Tile2 key={category.id} tileName={category.name} tileUrl={"/word/" + category.id}
                     imageName={category.imageName} themeFlavor={category.id-1}/>);
-                console.log("recalc body")
         }
  
         this.state = {tilesElements: tilesElements}
-        console.log("constructor body")
     }
 
 

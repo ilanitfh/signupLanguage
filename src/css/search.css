@@ -1,6 +1,4 @@
-:host {
-    --search-background-color: rgb(119,119,119);
-    --search-text-color: rgb(255,255,255);
+.searchInputHost {
 }
 
 .search {
@@ -27,9 +25,10 @@ input {
     border-radius: 13px;
     height: 26px;
     width: 157px;
-    background-color: var(--search-background-color);
+    background-color: rgb(119,119,119);;
     padding-left: 28px;
-    color: var(--search-text-color);
+    color: rgb(255,255,255);
+
 }
 
 input:focus {

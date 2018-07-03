@@ -1,4 +1,4 @@
-:host {
+.shellhost {
     --shell-header-background-color-0: rgb(206, 206, 206);
     --shell-header-background-color-1: rgb(143, 143, 143);
     --shell-header-text-color: rgb(255, 255, 255);
@@ -7,9 +7,7 @@
     --shell-decor-background-color-0: rgb(255,255,255);
     --shell-decor-background-color-1: rgb(132,132,132);
     --shell-decor-shade-color-0: rgb(96,96,96);
-}
 
-:host {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -18,13 +16,22 @@
     right: 0;
     bottom: 0;
 }
-header {
+
+.shellTopBlueBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: rgb(118, 121, 122);
+    z-index: 1001;
+}
+
+.shellheader {
     flex-shrink: 0;
     flex-grow: 0;
-    min-height: 136px;
-    max-height: 136px;
-    display: flex;
-    flex-direction: column;
+    min-height: 131px;
+    max-height: 131px;
     background-image: linear-gradient(to bottom,
         var(--shell-header-background-color-0),
         var(--shell-header-background-color-1)
@@ -32,18 +39,50 @@ header {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     position: relative;
 }
-header > div {
+
+.startBar {
+    display: flex;
+    justify-content: flex-start;
+    min-width: 30%;
+}
+.endBar {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 30%;
+ 
+}
+.shelltitle {
+    position: relative;
+    font-size: 24px;
+    font-weight: 200;
+    max-width: 40%;
+}
+
+.shellheaderTop {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     flex-shrink: 1;
     flex-grow: 1;
     min-height: 76px;
     padding: 0 14px;
-    display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     color: var(--shell-header-text-color);
 }
-header:after {
+
+.shellheader.button {
+    display: inline-block;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    padding: 0;
+    margin: 0 8px;
+}
+
+
+.shellheader::after {
     display: block;
     content: '';
     background-color: #000;
@@ -53,7 +92,8 @@ header:after {
     flex-shrink: 0;
     flex-grow: 0;
 }
-main {
+
+.shellmain {
     flex-shrink: 1;
     flex-grow: 1;
     padding: 8px 73px 0;
@@ -62,31 +102,8 @@ main {
         var(--shell-main-background-color-1)
     );
 }
-::slotted(button) {
-    display: inline-block;
-    font-size: 24px;
-    width: 24px;
-    height: 24px;
-    text-align: center;
-    padding: 0;
-    margin: 0 8px;
-}
-.start-bar {
-    display: flex;
-    justify-content: flex-start;
-    min-width: 30%;
-}
-.end-bar {
-    display: flex;
-    justify-content: flex-end;
-    min-width: 30%;
- 
-}
-.title {
-    position: relative;
-    font-size: 24px;
-    font-weight: 200;
-}
+
+
 .projectors {
     display: flex;
     flex-direction: row;
@@ -129,48 +146,4 @@ main {
     top: 154px;
     right: 18px;
     z-index: 99999;
-}
-
-:host(.decorated) .decor-shade {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 80px;
-    height: 50px;
-    background-color: var(--shell-decor-shade-color-0);
-    transform: translate3d(105px, -2px, 0) skew(14deg);
-}
-
-:host(.decorated) .decor {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 80px;
-    height: 55px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background: var(--shell-decor-background-color-0);
-    transform: translate3d(100px, -10px, 0) rotate(-7deg);
-}
-
-:host(.decorated) .decor:before,
-:host(.decorated) .decor:after {
-    content: '';
-    display: block;
-    width: 8px;
-    height: 8px;
-    background-color: var(--shell-decor-background-color-1);
-    border-radius: 4px;
-    position: absolute;
-    top: 6px;
-}
-
-:host(.decorated) .decor:before {
-    left: 6px;
-}
-
-:host(.decorated) .decor:after {
-    right: 6px;
 }

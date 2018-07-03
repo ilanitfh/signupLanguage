@@ -11,6 +11,7 @@ import {browserHistory} from "react-router";
 import SearchInput from "./components/SearchInput";
 
 import {scrollLeft, scrollRight, themeMap, saveWordTranslateX, saveRootTranslateX} from "./utils/Utils";
+import Shell from "./containers/Shell";
 
 class App extends Component {
     constructor(props) {
@@ -121,16 +122,15 @@ class App extends Component {
         }
         return (
             <div className="App">
-                <issie-shell theme={categoryTheme} id="page1" className="page">
+                <Shell theme={categoryTheme} id="page1" className="page">
                     <button slot="start-bar" className="zmdi zmdi-info-outline"></button>
-                    {/*<button slot="start-bar" className="zmdi zmdi-menu"></button>*/}
                     <h1 slot="title">{title}</h1>
                     <SearchInput theme={categoryTheme} slot="end-bar" onChange={this.handleSearch} ref="searchInput"/>
  
                     {leftArrow}
                     {rightArrow}
-                    { backElement }
-                </issie-shell>
+                    {backElement}
+                </Shell>
                 {this.props.children}
             </div>
         );

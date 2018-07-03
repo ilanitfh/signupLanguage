@@ -47,7 +47,7 @@
     transform: translate3d(0, -23px, 0);
 }
 
-.pin.header:before {
+.clip.header:before {
     display: inline-block;
     content: '';
     width: 8px;

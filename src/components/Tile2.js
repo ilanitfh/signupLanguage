@@ -4,10 +4,8 @@ import "../css/box.css";
 import "../css/shelf.css";
 import "../css/Tile.css";
 import '../css/App.css';
-//import '../css/Common.css';
 
 import {imageLocalCall} from "../apis/ImageLocalCall";
-
 
 
 class Tile2 extends React.Component {
@@ -20,7 +18,7 @@ class Tile2 extends React.Component {
             <div className="tileGroup">
                 <div className="tileBox boxhost" theme="blue" theme-flavor= {this.props.themeFlavor}>
                     
-                    <box>
+                    <div className="box">
                         <header>
                             <span></span>
                             <div></div>
@@ -31,7 +29,7 @@ class Tile2 extends React.Component {
                             </div>
                         </main>
                         
-                    </box>
+                    </div>
                                            
   
                     </div>

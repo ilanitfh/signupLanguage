@@ -20,7 +20,7 @@ class Card2 extends React.Component {
             <Rope>
                 <div className="cardhost" >
                 <div className="card" style={cardDouble} theme={this.props.theme}>
-                    <div className="header binder"></div>
+                    <div className="header clip"></div>
                     <div className="main">
                         <img className="tileImg" src={imageSrc} alt="card Placeholder"></img>
                         {image2}
