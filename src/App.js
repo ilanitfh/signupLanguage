@@ -22,28 +22,6 @@ class App extends Component {
         this.savePos = this.savePos.bind(this);
         this.ScrollLeft = this.ScrollLeft.bind(this);
         this.ScrollRight = this.ScrollRight.bind(this);
-        this.updateDimensions = this.updateDimensions.bind(this);
-    }
-    
-    updateDimensions() {
-        //todo make the resize cause children to re-render
-        //probable implement shouldComponentUpdate on children
-        if (this.props.children && this.props.children.length>0) {
-            this.props.children[0].setState({width:window.innerWidth})
-            console.log("resize")
-        } else
-        console.log("resize no children")
-    }
-    
-    componentWillMount(){
-        this.updateDimensions();
-    }
-    componentDidMount() {
-        window.addEventListener("resize", this.updateDimensions);
-    } 
-
-    componentWillUnmount() {
-        window.removeEventListener("resize", this.updateDimensions);
     }
 
     handleSearch(e) {
@@ -122,7 +100,7 @@ class App extends Component {
         }
         return (
             <div className="App">
-                <Shell theme={categoryTheme} id="page1" className="page">
+                <Shell theme={categoryTheme} id="page1">
                     <button slot="start-bar" className="zmdi zmdi-info-outline"></button>
                     <h1 slot="title">{title}</h1>
                     <SearchInput theme={categoryTheme} slot="end-bar" onChange={this.handleSearch} ref="searchInput"/>

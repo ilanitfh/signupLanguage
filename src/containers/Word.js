@@ -8,8 +8,23 @@ class Word extends React.Component {
     constructor(props){
         super(props);
         this.state = this.getState(this.props);
+        this.updateDimensions = this.updateDimensions.bind(this);
     }
+    
+    updateDimensions() {
+        this.setState({width:window.innerHeight})
+   }
+    
+    componentWillMount(){
+        this.updateDimensions();
+    }
+    componentDidMount() {
+        window.addEventListener("resize", this.updateDimensions);
+    } 
 
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.updateDimensions);
+    }
     getState(props) {
         var state;
         if (props.words === undefined) {

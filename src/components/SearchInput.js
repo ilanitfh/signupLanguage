@@ -14,9 +14,14 @@ class SearchInput extends React.Component {
     render() {
         return (
             <div className="search" slot={this.props.slot}>
-                <input ref="input" type="search" onChange={this.handleChange}/>
+                <input ref="input" type="search" onChange={this.handleChange}
+                onFocus={this.preventKeyBoardScrollApp}/>
             </div>
         );
+    }
+    preventKeyBoardScrollApp() {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
     }
 }
 export default SearchInput;

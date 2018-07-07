@@ -17,8 +17,23 @@ class Body extends React.Component {
         }
  
         this.state = {tilesElements: tilesElements}
+         this.updateDimensions = this.updateDimensions.bind(this);
     }
+    
+    updateDimensions() {
+        this.setState({width:window.innerHeight})
+   }
+    
+    componentWillMount(){
+        this.updateDimensions();
+    }
+    componentDidMount() {
+        window.addEventListener("resize", this.updateDimensions);
+    } 
 
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.updateDimensions);
+    }
 
     render() {
 
