@@ -2,7 +2,7 @@ import React from "react";
 import '../css/App.css';
 import {jsonLocalCall} from "../apis/JsonLocalCall";
 import Tile2 from "../components/Tile2";
-import {rootTranslateX} from "../utils/Utils";
+import {rootTranslateX, saveRootTranslateX, getTheme, getThemeFlavor} from "../utils/Utils";
 
 var tilesElements;
 class Body extends React.Component {
@@ -13,16 +13,18 @@ class Body extends React.Component {
         if (!tilesElements) {
             tilesElements = mainJson.categories.map((category) =>
                 <Tile2 key={category.id} tileName={category.name} tileUrl={"/word/" + category.id}
-                    imageName={category.imageName} themeFlavor={category.id-1}/>);
+                    imageName={category.imageName} themeFlavor={getThemeFlavor(category.id)}/>);
         }
  
         this.state = {tilesElements: tilesElements}
          this.updateDimensions = this.updateDimensions.bind(this);
     }
     
+ 
     updateDimensions() {
+       saveRootTranslateX(0);
         this.setState({width:window.innerHeight})
-   }
+    }
     
     componentWillMount(){
         this.updateDimensions();

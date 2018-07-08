@@ -27,6 +27,7 @@ export const scrollLeft = (() => {
 });
 
 
+
 function getIncrement(curr, toRight) {
     let container = document.getElementsByClassName("fgTileContainer")[0];
     var inc =  container.parentNode.clientWidth  - 50;
@@ -57,6 +58,21 @@ function setTranslateX(newVal) {
     container.style.transform = 'translateX(' +newVal+ 'px)';
 }
 
+//exluded: 8,12,20,14,6
+var themes = [0,1,2,3,4,5,7,9,10,11,13,15,16,17,18,19,21,22,23];
+export const getTheme = (categoryID) =>  {
+    let count = themes.length;
+    let index = (Number(categoryID)-1) % count;
+    let mapIndex = Number(themes[index])+1;
+    console.log("selected theme: " + categoryID + " -> " + mapIndex.toString());
+    return themeMap[mapIndex.toString()];
+}
+
+export const getThemeFlavor = (categoryID) =>  {
+    let count = themes.length;
+    let index = (Number(categoryID)-1) % count;
+    return Number(themes[index]);
+}
 
 export const themeMap = {
     "1": "flavor-0",

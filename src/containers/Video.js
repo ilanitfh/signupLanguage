@@ -3,7 +3,7 @@ import '../css/App.css';
 import "../../node_modules/video-react/dist/video-react.css";
 //import { Player } from 'video-react';
 import {videoLocalCall} from "../apis/VideoLocalCall";
-import {themeMap} from "../utils/Utils";
+import {getTheme} from "../utils/Utils";
 
 class Video extends React.Component {
     render() {
@@ -11,7 +11,7 @@ class Video extends React.Component {
         let categoryId = this.props.routeParams.categoryId;
         let videoContent = videoLocalCall(videoName);
         return (
-            <issie-player slot="body" theme={themeMap[categoryId]} class="nav"
+            <issie-player slot="body" theme={getTheme(categoryId)} class="nav"
                 src={videoContent}
                 poster="assets/poster.png" />
             //     <Player className="video"

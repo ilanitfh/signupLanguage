@@ -10,8 +10,9 @@ import PropTypes from "prop-types";
 import {browserHistory} from "react-router";
 import SearchInput from "./components/SearchInput";
 
-import {scrollLeft, scrollRight, themeMap, saveWordTranslateX, saveRootTranslateX} from "./utils/Utils";
+import {scrollLeft, scrollRight, saveWordTranslateX, saveRootTranslateX, getTheme} from "./utils/Utils";
 import Shell from "./containers/Shell";
+
 
 class App extends Component {
     constructor(props) {
@@ -78,21 +79,16 @@ class App extends Component {
         console.log("render app")
         if(path.startsWith("/word")){
             let categoryId = this.props.params.wordId;
-            categoryTheme=themeMap[categoryId];
+            categoryTheme=getTheme(categoryId);
             title = mainJson.categories[categoryId-1].name;
         }
 
         if(path.startsWith("/video")){
             let categoryId = this.props.params.categoryId;
-            categoryTheme = themeMap[categoryId];
+            categoryTheme = getTheme(categoryId);
             title = mainJson.categories[categoryId-1].name;
         }
 
-        if(path.startsWith("/word")){
-            let categoryId = this.props.params.wordId;
-            categoryTheme=themeMap[categoryId];
-            title = mainJson.categories[categoryId-1].name;
-        }
 
         if(!path.startsWith("/video")) {
             leftArrow =  <a slot="next" onClick={this.ScrollRight} id="scrolRight" className="navBtn"><img src="assets/arrow-right.svg" alt="arrow"/></a>

@@ -2,7 +2,7 @@ import React from "react";
 import '../css/App.css';
 import {jsonLocalCall} from "../apis/JsonLocalCall";
 import Card2 from "../components/Card2";
-import {themeMap, wordsTranslateX} from "../utils/Utils";
+import {wordsTranslateX, saveWordTranslateX, getTheme} from "../utils/Utils";
 
 class Word extends React.Component {
     constructor(props){
@@ -12,6 +12,7 @@ class Word extends React.Component {
     }
     
     updateDimensions() {
+        saveWordTranslateX(0);
         this.setState({width:window.innerHeight})
    }
     
@@ -50,7 +51,7 @@ class Word extends React.Component {
     render() {
         var wordsElements = this.state.words.map((word) => {
                 return <Card2 key={word.id} cardName={word.name} cardUrl={"/video/" + word.videoName + "/" + this.state.categoryId}
-                                imageName={word.imageName} imageName2={word.imageName2} theme={themeMap[this.state.categoryId]} />
+                                imageName={word.imageName} imageName2={word.imageName2} theme={getTheme(this.state.categoryId)} />
             });
 
         //calculate the average width, while considering double images
