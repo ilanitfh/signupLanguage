@@ -71,8 +71,8 @@ class App extends Component {
         let path = this.props.location.pathname;
         let leftArrow = "";
         let rightArrow = "";
-        let backElement = <button slot="end-bar" className="zmdi zmdi-arrow-right"
-                        onClick={this.goBack} style={{width:"15%" , visibility:(path !== "/" ? "visible":"hidden")}}/>
+        let backElement = <div className="rowdiv" slot="end-bar"><div className="spacer3"/><button  className="roundbutton "
+                        onClick={this.goBack} style={{visibility:(path !== "/" ? "visible":"hidden")}}><div className="zmdi zmdi-arrow-right"/></button></div>
        
 
         console.log("render app")
