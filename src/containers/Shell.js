@@ -21,6 +21,11 @@ function Slot({ children, slot }) {
 
 class Shell extends React.Component {
 
+    componentDidMount() {
+        if (this.props.isMobile && document.getElementsByClassName("projectors")[0]) {
+            document.getElementsByClassName("projectors")[0].style.padding = "0 10px";
+        }
+    }
     render(){
         return (
         <div className="shellhost">

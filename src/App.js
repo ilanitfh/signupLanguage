@@ -109,10 +109,10 @@ class App extends Component {
         }
         return (
             <div className="App">
-                <Shell theme={categoryTheme} id="page1">
+                <Shell theme={categoryTheme} id="page1" isMobile={this.state.isMobile}>
                     <button slot="start-bar" className="zmdi zmdi-info-outline"></button>
                     <div slot="title" style={{display: "inline-block"}}>{title}</div>
-                    <SearchInput theme={categoryTheme} slot="title" onChange={this.handleSearch} ref="searchInput" style={{display: "inline-block"}} isMobile={this.state.isMobile}/>
+                    <SearchInput theme={categoryTheme} slot="title" onChange={this.handleSearch} ref="searchInput" style={{display: "inline-block"}} isMobile={this.state.isMobile} />
 
                     {leftArrow}
                     {rightArrow}
