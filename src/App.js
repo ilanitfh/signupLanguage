@@ -86,7 +86,7 @@ class App extends Component {
         if(path.startsWith("/video")){
             let categoryId = this.props.params.categoryId;
             categoryTheme = getTheme(categoryId);
-            title = mainJson.categories[categoryId-1].name;
+            title =this.props.params.title;
         }
 
 
