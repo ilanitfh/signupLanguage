@@ -26,6 +26,7 @@ class Shell extends React.Component {
             document.getElementsByClassName("projectors")[0].style.padding = "0 10px";
         }
     }
+
     render(){
         return (
         <div className="shellhost">

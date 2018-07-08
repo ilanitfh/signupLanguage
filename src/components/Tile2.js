@@ -13,9 +13,11 @@ class Tile2 extends React.Component {
     render() {
     
         let imageSrc = this.props.imageName ? imageLocalCall(this.props.imageName) : "image1.png";
+        let classNameShelf = this.props.isMobile? "shelfMobile" : "shelf";
+        let classNameTileGroup = this.props.isMobile? "tileGroupMobile" : "tileGroup";
         return (
             <Link to={this.props.tileUrl}>
-            <div className="tileGroup">
+            <div className={classNameTileGroup}>
                 <div className="tileBox boxhost" theme="blue" theme-flavor= {this.props.themeFlavor}>
                     
                     <div className="box">
@@ -25,7 +27,7 @@ class Tile2 extends React.Component {
                         </header>
                         <main>
                             <div>
-                                <img  className="tileImg" src={imageSrc} alt="Category Placeholder"></img>
+                                <img className="tileImg" src={imageSrc} alt="Category Placeholder"></img>
                             </div>
                         </main>
                         
@@ -34,7 +36,7 @@ class Tile2 extends React.Component {
   
                     </div>
                     <div className="shelfhost">
-                                <div className="shelf">
+                                <div className={classNameShelf}>
                                     <div className="container">
                                         <h2 className="rtl tileText">{this.props.tileName}</h2>
                                     </div>

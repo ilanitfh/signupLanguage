@@ -96,7 +96,7 @@ class App extends Component {
         let backElement = <div className="rowdiv" slot="end-bar"><button  className="roundbutton "
                         onClick={this.goBack} style={{visibility:(path !== "/" ? "visible":"hidden")}}><div className="zmdi zmdi-arrow-right"/></button></div>
         let searchInput = "";
-        console.log("render app")
+
         if(path.startsWith("/word")){
             let categoryId = this.props.params.wordId;
             categoryTheme=getTheme(categoryId);

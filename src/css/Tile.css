@@ -120,11 +120,19 @@
     width: 100%;
 }
 
-.tileGroup {
+.tileGroup,
+.tileGroupMobile {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.tileGroup {
     width: 220px;
+}
+
+.tileGroupMobile {
+    width: 140px;
 }
