@@ -23,6 +23,7 @@ class App extends Component {
         this.savePos = this.savePos.bind(this);
         this.ScrollLeft = this.ScrollLeft.bind(this);
         this.ScrollRight = this.ScrollRight.bind(this);
+        this.showInfo = this.showInfo.bind(this);
 
         let isMobile = false;
         let winWidth = window.innerWidth;
@@ -55,8 +56,10 @@ class App extends Component {
 
     goBack() {
         // clean the search bar
-        this.refs.searchInput.refs.input.value = "";
         let path = this.props.location.pathname;
+        if (!path.startsWith('/info')) {
+            this.refs.searchInput.refs.input.value = "";
+        }
         if (path.startsWith('/word')) {
             //reset words position
             saveWordTranslateX(0);
@@ -79,6 +82,10 @@ class App extends Component {
         this.savePos(scrollRight());
     }
 
+    showInfo() {
+        this.props.router.push('/info');
+    }
+
     render() {
         let categoryTheme = "blue";
         let title = "שפת הסימנים";
@@ -88,8 +95,8 @@ class App extends Component {
         let rightArrow = "";
         let backElement = <div className="rowdiv" slot="end-bar"><button  className="roundbutton "
                         onClick={this.goBack} style={{visibility:(path !== "/" ? "visible":"hidden")}}><div className="zmdi zmdi-arrow-right"/></button></div>
-       
-        
+        let searchInput = "";
+        console.log("render app")
         if(path.startsWith("/word")){
             let categoryId = this.props.params.wordId;
             categoryTheme=getTheme(categoryId);
@@ -102,18 +109,24 @@ class App extends Component {
             title =this.props.params.title;
         }
 
-
-        if(!path.startsWith("/video")) {
+        if(path.startsWith("/word")){
+            let categoryId = this.props.params.wordId;
+            categoryTheme=getTheme(categoryId);
+            title = mainJson.categories[categoryId-1].name;
+        }
+        if(!path.startsWith("/info")){
+            searchInput = <SearchInput theme={categoryTheme} slot="title" onChange={this.handleSearch} ref="searchInput" style={{display: "inline-block"}} isMobile={this.state.isMobile}/>
+        }
+        if(!path.startsWith("/video") &&  !path.startsWith("/info")) {
             leftArrow =  <a slot="next" onClick={this.ScrollRight} id="scrolRight" className="navBtn"><img src="assets/arrow-right.svg" alt="arrow"/></a>
             rightArrow = <a slot="prev" onClick={this.ScrollLeft} id="scrollLeft" className="navBtn"><img src="assets/arrow-left.svg" alt="arrow"/></a>
         }
         return (
             <div className="App">
                 <Shell theme={categoryTheme} id="page1" isMobile={this.state.isMobile}>
-                    <button slot="start-bar" className="zmdi zmdi-info-outline"></button>
+                    <button slot="start-bar" className="zmdi zmdi-info-outline" onClick={this.showInfo}></button>
                     <div slot="title" style={{display: "inline-block"}}>{title}</div>
-                    <SearchInput theme={categoryTheme} slot="title" onChange={this.handleSearch} ref="searchInput" style={{display: "inline-block"}} isMobile={this.state.isMobile} />
-
+                    {searchInput}
                     {leftArrow}
                     {rightArrow}
                     {backElement}
