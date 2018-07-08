@@ -10,6 +10,7 @@ import Word from "./containers/Word";
 import Body from "./containers/Body";
 import Video from "./containers/Video";
 import Search from "./containers/Search";
+import Info from "./containers/Info";
 
 
 import configureStore from "./store/ConfigureStore";
@@ -25,6 +26,7 @@ render(
                 <Route path="/word/:wordId" component={Word} />
                 <Route path="/video/:videoName/:categoryId/:title" component={Video} />
                  <Route path="/search/:searchStr" component={Search} />
+                 <Route path="/info" component={Info} />
             </Route>
         </Router>
     </Provider>,
