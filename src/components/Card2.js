@@ -22,8 +22,8 @@ class Card2 extends React.Component {
                 <div className="card" style={cardDouble} theme={this.props.theme}>
                     <div className="header clip"></div>
                     <div className="main">
-                        <img className="tileImg" src={imageSrc} alt="card Placeholder"></img>
                         {image2}
+                        <img className="tileImg" src={imageSrc} alt="card Placeholder"></img>
                     </div>
                     <div className="footer">
                         <h2 className="rtl tileFont">{this.props.cardName}</h2>

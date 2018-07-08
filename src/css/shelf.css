@@ -24,9 +24,10 @@
     height: 25px;
     width: 170px;
     background-color: var(--shelf-background-color);
+
 }
 
-.shelf:before {
+.shelf1:before {
     display: block;
     content: '';
     height: 84px;
@@ -36,9 +37,10 @@
     left: 0;
     transform: translate3d(42px, 84px, 0) skew(45deg);
     background-image: linear-gradient(to bottom, rgba(73,73,73,0.2), rgba(73,73,73,0) 80%);
+    pointer-events: none;
 }
 
-.shelf:after {
+.shelf1:after {
     display: block;
     content: '';
     height: 18px;
@@ -49,5 +51,7 @@
     transform: translate3d(100%, -3.5px, 0) rotate(45deg) skew(45deg);
     transform-origin: 0 50%;
     background-image: linear-gradient(45deg, rgba(73,73,73,0.2), rgba(73,73,73,0));
+    pointer-events: none;
+
 }
 
