@@ -43,19 +43,20 @@
 .startBar {
     display: flex;
     justify-content: flex-start;
-    min-width: 30%;
 }
 .endBar {
     display: flex;
     justify-content: flex-end;
-    min-width: 30%;
  
 }
 .shelltitle {
     position: relative;
     font-size: 24px;
     font-weight: 200;
-    max-width: 40%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    padding-top: 11px;
 }
 
 .shellheaderTop {
@@ -146,4 +147,30 @@
     top: 154px;
     right: 18px;
     z-index: 99999;
+}
+
+/*Not in use - check*/
+#parent {
+    overflow: hidden;
+    border: 1px solid red
+}
+
+.right {
+    float: right;
+    width: 35px;
+    height: 35px;
+}
+.center {
+    text-align: center;
+    border: 1px solid;
+    width: 100%;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.left {
+    float: left;
+    width: 35px;
+    height: 35px;
+    border: 0px solid;
 }

@@ -79,6 +79,7 @@
     box-shadow: 0 0 3px gray;
     font-size:20px;
     font-weight:bold;
+    margin-top: -6px;
 }
 
 .spacer:before {
@@ -95,4 +96,13 @@
 }
 .roundbutton:hover {
     background: #262626;
+}
+
+.titleSlot {
+  text-align: center;
+}
+
+.centerSlot {
+    width: 100%;
+    padding-bottom: 10px;
 }

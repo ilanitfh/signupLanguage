@@ -23,6 +23,20 @@ class App extends Component {
         this.savePos = this.savePos.bind(this);
         this.ScrollLeft = this.ScrollLeft.bind(this);
         this.ScrollRight = this.ScrollRight.bind(this);
+
+        let isMobile = false;
+        let winWidth = window.innerWidth;
+        let winHeight = window.innerHeight;
+        let screenArea = winWidth * winHeight;
+        const minAreaIpad = 1024*768;
+
+        if(screenArea < minAreaIpad) {
+            isMobile = true;
+        }
+
+        this.state = {
+            isMobile : isMobile
+        };
     }
 
     handleSearch(e) {
@@ -72,11 +86,10 @@ class App extends Component {
         let path = this.props.location.pathname;
         let leftArrow = "";
         let rightArrow = "";
-        let backElement = <div className="rowdiv" slot="end-bar"><div className="spacer3"/><button  className="roundbutton "
+        let backElement = <div className="rowdiv" slot="end-bar"><button  className="roundbutton "
                         onClick={this.goBack} style={{visibility:(path !== "/" ? "visible":"hidden")}}><div className="zmdi zmdi-arrow-right"/></button></div>
        
-
-        console.log("render app")
+        
         if(path.startsWith("/word")){
             let categoryId = this.props.params.wordId;
             categoryTheme=getTheme(categoryId);
@@ -98,9 +111,9 @@ class App extends Component {
             <div className="App">
                 <Shell theme={categoryTheme} id="page1">
                     <button slot="start-bar" className="zmdi zmdi-info-outline"></button>
-                    <h1 slot="title">{title}</h1>
-                    <SearchInput theme={categoryTheme} slot="end-bar" onChange={this.handleSearch} ref="searchInput"/>
- 
+                    <div slot="title" style={{display: "inline-block"}}>{title}</div>
+                    <SearchInput theme={categoryTheme} slot="title" onChange={this.handleSearch} ref="searchInput" style={{display: "inline-block"}} isMobile={this.state.isMobile}/>
+
                     {leftArrow}
                     {rightArrow}
                     {backElement}

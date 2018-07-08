@@ -20,24 +20,20 @@ function Slot({ children, slot }) {
 }
 
 class Shell extends React.Component {
-    constructor(props){
-        super(props);
-    }
-
 
     render(){
         return (
         <div className="shellhost">
             <div className="shellTopBlueBar"/>
-            <div className="shellheader" theme={this.props.theme}>
+            <div className="shellheader parent" theme={this.props.theme}>
                 <div className="shellheaderTop">
-                    <div className="startBar">
+                    <div className="startBar right">
                         <Slot slot="start-bar">{this.props.children}</Slot>
                     </div>
-                    <div className="shelltitle">
+                    <div className="shelltitle centerSlot">
                         <Slot slot="title">{this.props.children}</Slot>
                     </div>
-                    <div className="endBar">
+                    <div className="endBar left">
                         <Slot slot="end-bar">{this.props.children}</Slot>
                     </div>
                 </div>
