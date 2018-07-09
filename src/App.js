@@ -73,7 +73,7 @@ class App extends Component {
         let leftArrow = "";
         let rightArrow = "";
         let backElement = <div className="rowdiv" slot="end-bar"><div className="spacer3"/><button  className="roundbutton "
-                        onClick={this.goBack} style={{visibility:(path !== "/" ? "visible":"hidden")}}><div className="zmdi zmdi-arrow-right"/></button></div>
+                        onClick={this.goBack} style={{visibility:(path !== "/" ? "visible":"hidden"), "--radius":"50px"}}><div className="zmdi zmdi-arrow-right"/></button></div>
        
 
         console.log("render app")
@@ -104,8 +104,8 @@ class App extends Component {
                     {leftArrow}
                     {rightArrow}
                     {backElement}
-                </Shell>
-                {this.props.children}
+                 </Shell>
+               {this.props.children}
             </div>
         );
     }

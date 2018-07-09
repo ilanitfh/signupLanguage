@@ -1,0 +1,15 @@
+.videohost {
+  position: relative;
+
+ }
+
+
+.replayhost {
+  position: absolute;
+  top: 46%;
+  left: 46%;
+  --radius:100px;
+  pointer-events:none;
+  visibility: hidden;
+}
+

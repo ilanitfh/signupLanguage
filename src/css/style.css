@@ -536,10 +536,14 @@
 }
 
 .zmdi-arrow-right:before {
-    /*content: '\f2ee';*/
     content: '\f2fb';
     font-size: 45px;
 
+}
+
+.zmdi-replay:before {
+    content: '\f3b2';
+    font-size: 85px;
 }
 
 /* GLOBAL STYLES */
