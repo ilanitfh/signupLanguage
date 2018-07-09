@@ -23,6 +23,21 @@ class App extends Component {
         this.savePos = this.savePos.bind(this);
         this.ScrollLeft = this.ScrollLeft.bind(this);
         this.ScrollRight = this.ScrollRight.bind(this);
+        this.showInfo = this.showInfo.bind(this);
+
+        let isMobile = false;
+        let winWidth = window.innerWidth;
+        let winHeight = window.innerHeight;
+        let screenArea = winWidth * winHeight;
+        const minAreaIpad = 1024*768;
+
+        if(screenArea < minAreaIpad) {
+            isMobile = true;
+        }
+
+        this.state = {
+            isMobile : isMobile
+        };
     }
 
     handleSearch(e) {
@@ -41,8 +56,10 @@ class App extends Component {
 
     goBack() {
         // clean the search bar
-        this.refs.searchInput.refs.input.value = "";
         let path = this.props.location.pathname;
+        if (!path.startsWith('/info')) {
+            this.refs.searchInput.refs.input.value = "";
+        }
         if (path.startsWith('/word')) {
             //reset words position
             saveWordTranslateX(0);
@@ -65,6 +82,10 @@ class App extends Component {
         this.savePos(scrollRight());
     }
 
+    showInfo() {
+        this.props.router.push('/info');
+    }
+
     render() {
         let categoryTheme = "blue";
         let title = "שפת הסימנים";
@@ -72,11 +93,11 @@ class App extends Component {
         let path = this.props.location.pathname;
         let leftArrow = "";
         let rightArrow = "";
-        let backElement = <div className="rowdiv" slot="end-bar"><div className="spacer3"/><button  className="roundbutton "
-                        onClick={this.goBack} style={{visibility:(path !== "/" ? "visible":"hidden"), "--radius":"50px"}}><div className="zmdi zmdi-arrow-right"/></button></div>
-       
 
-        console.log("render app")
+        let backElement = <div className="rowdiv" slot="end-bar"><button  className="roundbutton "
+                        onClick={this.goBack} style={{visibility:(path !== "/" ? "visible":"hidden") , "--radius":"50px"}}><div className="zmdi zmdi-arrow-right"/></button></div>
+        let searchInput = "";
+
         if(path.startsWith("/word")){
             let categoryId = this.props.params.wordId;
             categoryTheme=getTheme(categoryId);
@@ -89,18 +110,24 @@ class App extends Component {
             title =this.props.params.title;
         }
 
-
-        if(!path.startsWith("/video")) {
+        if(path.startsWith("/word")){
+            let categoryId = this.props.params.wordId;
+            categoryTheme=getTheme(categoryId);
+            title = mainJson.categories[categoryId-1].name;
+        }
+        if(!path.startsWith("/info")){
+            searchInput = <SearchInput theme={categoryTheme} slot="title" onChange={this.handleSearch} ref="searchInput" style={{display: "inline-block"}} isMobile={this.state.isMobile}/>
+        }
+        if(!path.startsWith("/video") &&  !path.startsWith("/info")) {
             leftArrow =  <a slot="next" onClick={this.ScrollRight} id="scrolRight" className="navBtn"><img src="assets/arrow-right.svg" alt="arrow"/></a>
             rightArrow = <a slot="prev" onClick={this.ScrollLeft} id="scrollLeft" className="navBtn"><img src="assets/arrow-left.svg" alt="arrow"/></a>
         }
         return (
             <div className="App">
-                <Shell theme={categoryTheme} id="page1">
-                    <button slot="start-bar" className="zmdi zmdi-info-outline"></button>
-                    <h1 slot="title">{title}</h1>
-                    <SearchInput theme={categoryTheme} slot="end-bar" onChange={this.handleSearch} ref="searchInput"/>
- 
+                <Shell theme={categoryTheme} id="page1" isMobile={this.state.isMobile}>
+                    <button slot="start-bar" className="zmdi zmdi-info-outline" onClick={this.showInfo}></button>
+                    <div slot="title" style={{display: "inline-block"}}>{title}</div>
+                    {searchInput}
                     {leftArrow}
                     {rightArrow}
                     {backElement}

@@ -2,7 +2,6 @@
 }
 
 .search {
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
@@ -24,7 +23,7 @@ input {
     border: none;
     border-radius: 13px;
     height: 26px;
-    width: 157px;
+    width: 150px;
     background-color: rgb(119,119,119);;
     padding-left: 28px;
     color: rgb(255,255,255);
@@ -40,4 +39,10 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
     display: none;
+}
+
+.sameLine {
+    display: inline-block;
+    float: right;
+    margin-right: 30px;
 }

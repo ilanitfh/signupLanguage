@@ -12,8 +12,9 @@ class SearchInput extends React.Component {
     handleChange (){}
 
     render() {
+        let searchClassName = this.props.isMobile? "": "sameLine";
         return (
-            <div className="search" slot={this.props.slot}>
+            <div slot={this.props.slot} className={"search " + searchClassName}>
                 <input ref="input" type="search" onChange={this.handleChange}
                 onFocus={this.preventKeyBoardScrollApp}/>
             </div>
