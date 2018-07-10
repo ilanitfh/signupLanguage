@@ -50,7 +50,7 @@ class Word extends React.Component {
 
     render() {
         var wordsElements = this.state.words.map((word) => {
-                return <Card2 key={word.id} cardName={word.name} cardUrl={"/video/" + word.videoName + "/" + this.state.categoryId + "/" + word.name}
+                return <Card2 key={word.id} cardName={word.name} vidName={word.videoName} cardUrl={"/video/" + word.videoName + "/" + this.state.categoryId + "/" + word.name}
                                 imageName={word.imageName} imageName2={word.imageName2} theme={getTheme(this.state.categoryId)} />
             });
 

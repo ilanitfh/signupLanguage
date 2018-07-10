@@ -7,6 +7,12 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "org.issieshapiro.signlang"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "org.issieshapiro.signlang"
+    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "org.issieshapiro.signlang"
     }

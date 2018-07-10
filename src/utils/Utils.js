@@ -64,7 +64,6 @@ export const getTheme = (categoryID) =>  {
     let count = themes.length;
     let index = (Number(categoryID)-1) % count;
     let mapIndex = Number(themes[index])+1;
-    console.log("selected theme: " + categoryID + " -> " + mapIndex.toString());
     return themeMap[mapIndex.toString()];
 }
 
@@ -101,3 +100,11 @@ export const themeMap = {
     "24": "flavor-23"
 };
 
+
+export const VideoToggle = (on) =>  { 
+    document.getElementById("playerhost").style.visibility = (on?"visible":"hidden");
+    if (!on) {
+        console.log("stop")
+        document.getElementById("player").pause();
+    }
+}

@@ -4,44 +4,122 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    
     <style>
         html, body { height:100%; width:100%; }
+
+        .centerWidthAlign {
+            margin: auto;
+            width: 100%;
+            padding: 15px;
+        }
+        .App-intro {
+            font-size: large;
+            padding-top: 150px;
+
+        }
+
+        .player {
+            position:relative; 
+            z-index: 1002;
+            top:150px; 
+            visibility: hidden;
+        }
+        .roundbutton {
+            display:block;
+            width:var(--radius);
+            height:var(--radius);
+            line-height:var(--radius);
+            border: 2px solid #f5f5f5;
+            border-radius: 50%;
+            color:#f5f5f5;
+            text-align:center;
+            text-decoration:none;
+            background: #464646;
+            box-shadow: 0 0 3px gray;
+            font-size:20px;
+            font-weight:bold;
+            margin-top: -6px;
+        }
+        .replayhost {
+            position: absolute;
+            top: 46%;
+            left: 46%;
+            --radius:100px;
+            pointer-events:none;
+            visibility: hidden;
+        }
+
+        .zmdi {
+            display: inline-block;
+            font: normal normal normal 0px/1 'Material-Design-Iconic-Font';
+            font-size: 30px;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .zmdi-info-outline:before {
+            content: '\f1f7';
+        }
+
+        .zmdi-menu:before {
+            content: '\f197';
+        }
+
+        .zmdi-search:before {
+            content: '\f1c3';
+        }
+
+        .zmdi-apps:before {
+            content: '\f313';
+        }
+
+        .zmdi-arrow-right:before {
+            content: '\f2fb';
+            font-size: 45px;
+
+        }
+
+        .zmdi-replay:before {
+            content: '\f3b2';
+            font-size: 85px;
+        }
+
     </style>
 
     <title>Sign Language Application</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="../src/css/style.css">
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
  
-    <!--script src="uxComponents/shell/shell.js"></script>
-    <script src="uxComponents/shelf/shelf.js"></script>
-    <script src="uxComponents/box/box.js"></script>
-    <script src="uxComponents/rope/rope.js"></script>
-    <script src="uxComponents/card/card.js"></script -->
-    <script src="uxComponents/player/player.js"></script>
-    <!-- script src="uxComponents/split/split.js"></script -->
     <script>
+        document.basePath = "/";
         function doNothing(e) {
             e.preventDefault(); 
         }
         document.addEventListener("touchmove", doNothing, {passive:false});
 
-        function preventScroll(e){
-            //todo
-            window.scrollTo(0, 0);
-            document.body.scrollTop = 0;
-
-            e.preventDefault();
-            e.stopPropagation();
-            return false;
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            console.log(cordova.file);
+            console.log(cordova.file.applicationDirectory);
+            document.basePath = cordova.file.applicationDirectory;
         }
-        document.addEventListener("scroll", preventScroll, {passive:!1});
-
     </script>
 </head>
 
 <body theme="blue">
 <div class="container-fluid fgAppHolder" style="position: fixed; height:100%; width:100%; top:0; left:0;">
+</div>
+<div class=" player" id="playerhost">
+    <video class="centerWidthAlign" controls autoplay="true" id="player"  playsinline
+        onclick="this.paused?this.play():this.pause();" onplay="buttonReplay.style.visibility='hidden';" onpause="buttonReplay.style.visibility='inherit';"></video>
+    <div class="replayhost" id="buttonReplay">
+            <button  class="roundbutton">
+            <div class="zmdi zmdi-replay" />
+        </button>
+    </div>
 </div>
 </body>
 

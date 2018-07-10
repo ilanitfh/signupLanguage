@@ -8,6 +8,18 @@ import Rope from "../components/Rope";
 
 
 class Card2 extends React.Component {
+   constructor(props){
+        super(props);
+        //this.play = this.play.bind(this);
+   }
+
+    /*play(e) {
+        e.preventDefault = true
+        let url = document.basePath + (document.basePath.startsWith("file")?"www/":"") + "videos/"+ this.props.vidName;
+
+        document.getElementById("player").src = url;
+        document.getElementById("playerhost").style.visibility = "visible";
+    }*/
     
     render() {
 

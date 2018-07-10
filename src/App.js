@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import {browserHistory} from "react-router";
 import SearchInput from "./components/SearchInput";
 
-import {scrollLeft, scrollRight, saveWordTranslateX, saveRootTranslateX, getTheme} from "./utils/Utils";
+import {scrollLeft, scrollRight, saveWordTranslateX, saveRootTranslateX, getTheme, VideoToggle} from "./utils/Utils";
 import Shell from "./containers/Shell";
 
 
@@ -108,6 +108,10 @@ class App extends Component {
             let categoryId = this.props.params.categoryId;
             categoryTheme = getTheme(categoryId);
             title =this.props.params.title;
+
+            VideoToggle(true);
+        } else {
+            VideoToggle(false);
         }
 
         if(path.startsWith("/word")){
@@ -119,6 +123,7 @@ class App extends Component {
             searchInput = <SearchInput theme={categoryTheme} slot="title" onChange={this.handleSearch} ref="searchInput" style={{display: "inline-block"}} isMobile={this.state.isMobile}/>
         }
         if(!path.startsWith("/video") &&  !path.startsWith("/info")) {
+
             leftArrow =  <a slot="next" onClick={this.ScrollRight} id="scrolRight" className="navBtn"><img src="assets/arrow-right.svg" alt="arrow"/></a>
             rightArrow = <a slot="prev" onClick={this.ScrollLeft} id="scrollLeft" className="navBtn"><img src="assets/arrow-left.svg" alt="arrow"/></a>
         }
