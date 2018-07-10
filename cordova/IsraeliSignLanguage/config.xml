@@ -10,7 +10,13 @@
     <icon src="resources/icon.png" />
     <preference name="splashscreen" value="splash" />
     <platform name="ios">
-        <splash height="768" src="resources/Default-Landscape~ipad.png" width="1024" />
+        <splash height="1136" src="resources/Default-568h@2x~iphone(640x1136).png" width="640" />
+        <splash height="1496" src="resources/Default-Landscape@2x~ipad.png" width="2048" />
+        <splash height="748" src="resources/Default-Landscape~ipad(1024x748).png" width="1024" />
+        <splash height="2008" src="resources/Default-Portrait@2x~ipad(1536x2008).png" width="1536" />
+        <splash height="1024" src="resources/Default-Portrait~ipad(768x1024).png" width="768" />
+        <splash height="960" src="resources/Default@2x~iphone(640x960).png" width="640" />
+        <splash height="480" src="resources/Default~iphone(320x480).png" width="320" />
     </platform>
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashScreenDelay" value="3000" />

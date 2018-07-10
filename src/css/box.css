@@ -5,6 +5,7 @@
     min-width: 124px;
     max-width: 124px;
     --box-background-color-2: rgb(255,255,255);
+    pointer-events:none;
  }
 
 

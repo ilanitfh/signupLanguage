@@ -36,7 +36,7 @@ class Body extends React.Component {
     
  
     updateDimensions() {
-       saveRootTranslateX(0);
+        //saveRootTranslateX(0);
         this.setState({width:window.innerHeight})
     }
     

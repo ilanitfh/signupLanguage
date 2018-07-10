@@ -5,6 +5,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    padding-top: 5px;
 }
 
 .search:before {
@@ -16,6 +17,7 @@
     text-align: center;
     content: '\f1c3';
     margin-right: -22px;
+    vertical-align: middle;
 }
 
 input {

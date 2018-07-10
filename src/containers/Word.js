@@ -12,7 +12,6 @@ class Word extends React.Component {
     }
     
     updateDimensions() {
-        saveWordTranslateX(0);
         this.setState({width:window.innerHeight})
    }
     

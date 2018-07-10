@@ -30,18 +30,18 @@ class Card2 extends React.Component {
         return (
         <Link to={this.props.cardUrl}>
             <Rope>
-                <div className="cardhost" >
-                <div className="card" style={cardDouble} theme={this.props.theme}>
-                    <div className="header clip"></div>
-                    <div className="main">
-                        {image2}
-                        <img className="tileImg" src={imageSrc} alt="card Placeholder"></img>
+               
+                    <div className="card" style={cardDouble} theme={this.props.theme}>
+                        <div className="header clip"></div>
+                        <div className="main">
+                            {image2}
+                            <img className="tileImg" src={imageSrc} alt="card Placeholder"></img>
+                        </div>
+                        <div className="footer">
+                            <h2 className="rtl tileFont">{this.props.cardName}</h2>
+                        </div>
                     </div>
-                    <div className="footer">
-                        <h2 className="rtl tileFont">{this.props.cardName}</h2>
-                    </div>
-                </div>
-                </div>
+             
 
             </Rope>
         </Link>

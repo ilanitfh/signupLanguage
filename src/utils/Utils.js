@@ -106,7 +106,6 @@ export const VideoToggle = (on) =>  {
     document.getElementById("playerhost").style.visibility = (on?"visible":"hidden");
     if (!on) {
         video.pause();
-        console.log("clear video monitor")
         clearInterval(videoMonitor);
         videoMonitor = undefined
     } else {
@@ -119,14 +118,10 @@ function monitorVideo() {
     let video = document.getElementById("player");
     if (video) {
         if (video.ended) {
-            console.log("ended")
             setButtons(0,0,1);
         } else if (video.paused) {
-            console.log("paused")
             setButtons(0,1,0);
         } else {
-            console.log("playing")
-
             setButtons(1,0,0);
         }
     }
