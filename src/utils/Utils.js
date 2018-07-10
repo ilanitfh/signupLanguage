@@ -100,11 +100,44 @@ export const themeMap = {
     "24": "flavor-23"
 };
 
-
+var videoMonitor = undefined;
 export const VideoToggle = (on) =>  { 
+    let video = document.getElementById("player");
     document.getElementById("playerhost").style.visibility = (on?"visible":"hidden");
     if (!on) {
-        console.log("stop")
-        document.getElementById("player").pause();
+        video.pause();
+        console.log("clear video monitor")
+        clearInterval(videoMonitor);
+        videoMonitor = undefined
+    } else {
+        if (videoMonitor === undefined)
+            videoMonitor = setInterval(monitorVideo, 250);
     }
+}
+
+function monitorVideo() {
+    let video = document.getElementById("player");
+    if (video) {
+        if (video.ended) {
+            console.log("ended")
+            setButtons(0,0,1);
+        } else if (video.paused) {
+            console.log("paused")
+            setButtons(0,1,0);
+        } else {
+            console.log("playing")
+
+            setButtons(1,0,0);
+        }
+    }
+}
+
+function setButtons(pause, play, replay) {
+    let pauseBtn = document.getElementById("pauseBtn");
+    let playBtn = document.getElementById("playBtn");
+    let replayBtn = document.getElementById("replayBtn");
+
+    pauseBtn.style.display = (pause === 1?"block":"none");    
+    playBtn.style.display = (play === 1?"block":"none");    
+    replayBtn.style.display = (replay === 1?"block":"none");    
 }

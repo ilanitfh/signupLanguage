@@ -26,14 +26,6 @@
 
 }
 
-.spacer:before {
-    content: "\00a0 ";
-}
-
-.spacer3:before {
-    content: "\00a0 \00a0 \00a0";
-}
-
 .rowdiv {
     display: flex;
     flex-direction: row;

@@ -25,6 +25,12 @@
             top:150px; 
             visibility: hidden;
         }
+
+        video::-webkit-media-controls-panel {
+            padding: 100px
+            height: 25px;
+        }
+
         .roundbutton {
             display:block;
             width:var(--radius);
@@ -43,13 +49,25 @@
         }
         .replayhost {
             position: absolute;
-            top: 46%;
-            left: 46%;
+            top: 80%;
+            left: 87%;
             --radius:100px;
             pointer-events:none;
-            visibility: hidden;
+            visibility: inherit;
+            font-size: 85px;
         }
 
+        .display-hidden {
+            display: none;
+        }
+
+        .spacer:before {
+            content: "\00a0 ";
+        }
+
+        .spacer3:before {
+            content: "\00a0 \00a0 \00a0";
+        }
         .zmdi {
             display: inline-block;
             font: normal normal normal 0px/1 'Material-Design-Iconic-Font';
@@ -86,6 +104,15 @@
             font-size: 85px;
         }
 
+        .zmdi-play:after {
+            content: '\f3aa';
+            font-size: 85px;
+        }
+        .zmdi-pause:before {
+            content: '\f3a7';
+            font-size: 85px;
+        }
+
     </style>
 
     <title>Sign Language Application</title>
@@ -94,6 +121,7 @@
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
  
     <script>
+        
         document.basePath = "/";
         function doNothing(e) {
             e.preventDefault(); 
@@ -112,14 +140,21 @@
 <body theme="blue">
 <div class="container-fluid fgAppHolder" style="position: fixed; height:100%; width:100%; top:0; left:0;">
 </div>
-<div class=" player" id="playerhost">
-    <video class="centerWidthAlign" controls autoplay="true" id="player"  playsinline
-        onclick="this.paused?this.play():this.pause();" onplay="buttonReplay.style.visibility='hidden';" onpause="buttonReplay.style.visibility='inherit';"></video>
-    <div class="replayhost" id="buttonReplay">
-            <button  class="roundbutton">
-            <div class="zmdi zmdi-replay" />
-        </button>
-    </div>
+<div class="player" id="playerhost">
+    <video class="centerWidthAlign"  autoplay="true" id="player"  playsinline
+        onclick="this.paused?this.play():this.pause();" 
+        ></video>
+        <div class="replayhost" id="buttonReplay">
+            <button id="pauseBtn" class="roundbutton display-hidden">
+                <div   class="spacer zmdi zmdi-pause" />
+            </button>
+            <button id="playBtn" class="roundbutton display-hidden">
+                <div class="spacer zmdi zmdi-play" />
+            </button>
+            <button id="replayBtn" class="roundbutton display-hidden">
+                <div class="spacer zmdi zmdi-replay" />
+            </button>
+        </div>
 </div>
 </body>
 
