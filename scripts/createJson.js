@@ -3,7 +3,7 @@ console.log("Start building JSON file for sign language app");
 var sourceFile = '../../../ContentNew'
 var targetFile = '../src/jsons/main.json'
 var imagePath = '../src/images/'
-var videoPath = '../src/videos/'
+var videoPath = '../public/videos/'
 var colors = [
     "#2d9f8e",
     "#d95841",
@@ -68,6 +68,8 @@ for (var i=0; items && i<items.length; i++) {
 //                    console.log(category.id + " " + words[j]);
                     var word = {};
                     word.name = words[j].replace(suffix, "");
+                    //deal with duplicates
+                    word.name = word.name.replace("__2", "");
                     word.id = fileIndex;
                     fileIndex++;
                     word.imageName = words[j].replace(suffix, ".png");
