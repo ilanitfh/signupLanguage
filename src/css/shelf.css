@@ -9,9 +9,7 @@
     flex-direction:  row;
     justify-content: center;
     align-items: stretch;
-    height: 140px;
     margin: 0;
-
 }
 
 ::slotted(*) {
@@ -34,7 +32,7 @@
     width: 125px;
 }
 
-.shelf1:before {
+.shelf:before {
     display: block;
     content: '';
     height: 84px;
@@ -47,7 +45,7 @@
     pointer-events: none;
 }
 
-.shelf1:after {
+.shelf:after {
     display: block;
     content: '';
     height: 18px;
