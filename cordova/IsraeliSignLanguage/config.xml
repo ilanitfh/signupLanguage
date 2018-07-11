@@ -14,9 +14,15 @@
         <splash height="1496" src="resources/Default-Landscape@2x~ipad.png" width="2048" />
         <splash height="748" src="resources/Default-Landscape~ipad(1024x748).png" width="1024" />
         <splash height="2008" src="resources/Default-Portrait@2x~ipad(1536x2008).png" width="1536" />
-        <splash height="1024" src="resources/Default-Portrait~ipad(768x1024).png" width="768" />
+        <splash height="1024" src="resources/Splash screen  768 x 1024.png" width="768" />
         <splash height="960" src="resources/Default@2x~iphone(640x960).png" width="640" />
         <splash height="480" src="resources/Default~iphone(320x480).png" width="320" />
+        <splash height="768" src="resources/Splash screen  1024 x 768.png" width="1024" />
+        <splash height="1334" src="resources/Splash screen 750 x 1334.png" width="750" />
+        <splash height="2208" src="resources/Splash screen 1242 x 2208.png" width="1242" />
+        <splash height="2048" src="resources/Splash screen 1536 x 2048.png" width="1536" />
+        <splash height="1536" src="resources/Splash screen 2048 x 1536.png" width="2048" />
+        <splash height="1242" src="resources/Splash screen 2208 x 1242.png" width="2208" />
     </platform>
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashScreenDelay" value="3000" />
