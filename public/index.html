@@ -61,6 +61,7 @@
             display: none;
         }
 
+
         .spacer:before {
             content: "\00a0 ";
         }
@@ -99,16 +100,27 @@
 
         }
 
-        .zmdi-replay:before {
+        .zmdi-replay {
+            padding-top: 5px;
+        }
+        .zmdi-replay:after {
             content: '\f3b2';
             font-size: 85px;
+        }
+
+        .zmdi-play {
+            padding-top: 5px;
         }
 
         .zmdi-play:after {
             content: '\f3aa';
             font-size: 85px;
+            padding-bottom: -20px;
         }
-        .zmdi-pause:before {
+        .zmdi-pause {
+            padding-top: 5px;
+        }
+        .zmdi-pause:after {
             content: '\f3a7';
             font-size: 85px;
         }
@@ -146,13 +158,13 @@
         ></video>
         <div class="replayhost" id="buttonReplay">
             <button id="pauseBtn" class="roundbutton display-hidden">
-                <div   class="spacer zmdi zmdi-pause" />
+                <div   class=" zmdi zmdi-pause" />
             </button>
             <button id="playBtn" class="roundbutton display-hidden">
                 <div class="spacer zmdi zmdi-play" />
             </button>
             <button id="replayBtn" class="roundbutton display-hidden">
-                <div class="spacer zmdi zmdi-replay" />
+                <div class=" zmdi zmdi-replay" />
             </button>
         </div>
 </div>

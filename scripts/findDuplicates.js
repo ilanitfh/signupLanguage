@@ -18,7 +18,7 @@ function readFiles(thePath) {
         } else {
             if (fileMap.hasOwnProperty(items[i])) {
                 //found duplicate
-                console.log("Path: " + thePath + ",\t\t File:" + items[i]);
+                console.log("Path1: " + thePath + ",\t\tPath2:" + fileMap[items[i]] + ",  File:" + items[i]);
             } else {
                 fileMap[items[i]] = thePath;
             }
