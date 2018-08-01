@@ -63,8 +63,8 @@ class Word extends React.Component {
             let tileW = widthSum / elementWidths.length;
 
             //calculate best width:
-            let tileH = 200;
-            let rows = Math.max(Math.floor( (window.innerHeight - 110) / tileH), 1);
+            let tileH = 192;
+            let rows = Math.max(Math.floor( (window.innerHeight - 153) / tileH), 1);
             let cols = Math.ceil(wordsElements.length / rows)
             width = cols * tileW;
         }

@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/search.css";
+import { isNarrow } from "../utils/Utils";
 
 class SearchInput extends React.Component {
     constructor(props){
@@ -12,7 +13,7 @@ class SearchInput extends React.Component {
     handleChange (){}
 
     render() {
-        let searchClassName = this.props.isMobile? "": "sameLine";
+        let searchClassName = isNarrow()? "": "sameLine";
         return (
             <div slot={this.props.slot} className={"search " + searchClassName}>
                 <input ref="input" type="search" onChange={this.handleChange}

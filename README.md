@@ -19,7 +19,6 @@
   * Open xcode and open a workspace in `cordova/IsraeliSignLanguage/platforms/ios/IssieSign.xcworkspace`
   * On the project Navigator left panel, select the root (IssieSign)
   * In the "Signing" section, choose the Team (you would need to click on manage-account and add your appleId account before)
-  * In the "App Icons and Launch Images: In the "Launch Images Source" select "Don't use asses catalogs"
   * choose a device (your connected iPad) and press the run button.
   * On first run, you need to verify the app: in Settings->General->Device Management->choose you e-mail and the verify the app.
   

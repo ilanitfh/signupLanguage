@@ -6,6 +6,7 @@ import "../css/Tile.css";
 import '../css/App.css';
 
 import {imageLocalCall} from "../apis/ImageLocalCall";
+import { isNarrow } from "../utils/Utils";
 
 
 class Tile2 extends React.Component {
@@ -13,8 +14,8 @@ class Tile2 extends React.Component {
     render() {
     
         let imageSrc = this.props.imageName ? imageLocalCall(this.props.imageName) : "image1.png";
-        let classNameShelf = this.props.isMobile? "shelfMobile" : "shelf";
-        let classNameTileGroup = this.props.isMobile? "tileGroupMobile" : "tileGroup";
+        let classNameShelf = isNarrow()? "shelfMobile" : "shelf";
+        let classNameTileGroup = isNarrow()? "tileGroupMobile" : "tileGroup";
         return (
             <Link to={this.props.tileUrl}>
             <div className={classNameTileGroup}>

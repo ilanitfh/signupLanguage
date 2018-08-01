@@ -1,5 +1,6 @@
 import React from "react";
 import '../css/shell.css';
+import { isNarrow } from "../utils/Utils";
 
 function Slot({ children, slot }) {
     let slottedChildren = [];
@@ -20,9 +21,26 @@ function Slot({ children, slot }) {
 }
 
 class Shell extends React.Component {
+    constructor(props){
+        super(props);
+        this.updateDimensions = this.updateDimensions.bind(this);
+    }
+ 
+    updateDimensions() {
+        this.setState({width:window.innerHeight})
+    }
+    
+    componentWillMount(){
+        this.updateDimensions();
+    }
+ 
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.updateDimensions);
+    }
 
     componentDidMount() {
-        if (this.props.isMobile && document.getElementsByClassName("projectors")[0]) {
+        window.addEventListener("resize", this.updateDimensions);
+        if (isNarrow() && document.getElementsByClassName("projectors")[0]) {
             document.getElementsByClassName("projectors")[0].style.padding = "0 10px";
         }
     }

@@ -26,7 +26,9 @@ export const scrollLeft = (() => {
     return newVal;
 });
 
-
+export const isNarrow = (() => {
+    return window.innerWidth < 700
+});
 
 function getIncrement(curr, toRight) {
     let container = document.getElementsByClassName("fgTileContainer")[0];

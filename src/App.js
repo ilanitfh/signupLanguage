@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import {browserHistory} from "react-router";
 import SearchInput from "./components/SearchInput";
 
-import {scrollLeft, scrollRight, saveWordTranslateX, saveRootTranslateX, getTheme, VideoToggle} from "./utils/Utils";
+import {scrollLeft, scrollRight, saveWordTranslateX, saveRootTranslateX, getTheme, VideoToggle, isNarrow} from "./utils/Utils";
 import Shell from "./containers/Shell";
 
 
@@ -25,19 +25,8 @@ class App extends Component {
         this.ScrollRight = this.ScrollRight.bind(this);
         this.showInfo = this.showInfo.bind(this);
 
-        let isMobile = false;
         let winWidth = window.innerWidth;
         let winHeight = window.innerHeight;
-        let screenArea = winWidth * winHeight;
-        const minAreaIpad = 1024*768;
-
-        if(screenArea < minAreaIpad) {
-            isMobile = true;
-        }
-
-        this.state = {
-            isMobile : isMobile
-        };
     }
 
     handleSearch(e) {
@@ -120,7 +109,7 @@ class App extends Component {
             title = mainJson.categories[categoryId-1].name;
         }
         if(!path.startsWith("/info")){
-            searchInput = <SearchInput theme={categoryTheme} slot={this.state.isMobile?"title":"end-bar"} onChange={this.handleSearch} ref="searchInput" style={{display: "inline-block"}} isMobile={this.state.isMobile}/>
+            searchInput = <SearchInput theme={categoryTheme} slot={isNarrow()?"title":"end-bar"} onChange={this.handleSearch} ref="searchInput" style={{display: "inline-block"}} />
         }
         if(!path.startsWith("/video") &&  !path.startsWith("/info")) {
 
@@ -129,7 +118,7 @@ class App extends Component {
         }
         return (
             <div className="App">
-                <Shell theme={categoryTheme} id="page1" isMobile={this.state.isMobile}>
+                <Shell theme={categoryTheme} id="page1" >
                     <button slot="start-bar" className="zmdi zmdi-info-outline" onClick={this.showInfo}></button>
                     <div slot="title" style={{display: "inline-block"}}>{title}</div>
                     {searchInput}
