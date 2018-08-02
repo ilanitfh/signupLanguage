@@ -135,8 +135,11 @@
     <script>
         
         document.basePath = "/";
+        document.preventTouch = true;
         function doNothing(e) {
-            e.preventDefault(); 
+            if (document.preventTouch) {
+                e.preventDefault(); 
+            }
         }
         document.addEventListener("touchmove", doNothing, {passive:false});
 

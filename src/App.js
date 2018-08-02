@@ -109,7 +109,10 @@ class App extends Component {
             title = mainJson.categories[categoryId-1].name;
         }
         if(!path.startsWith("/info")){
+            document.preventTouch = true;
             searchInput = <SearchInput theme={categoryTheme} slot={isNarrow()?"title":"end-bar"} onChange={this.handleSearch} ref="searchInput" style={{display: "inline-block"}} />
+        } else {
+            document.preventTouch = false;
         }
         if(!path.startsWith("/video") &&  !path.startsWith("/info")) {
 
