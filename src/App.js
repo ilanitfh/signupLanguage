@@ -113,7 +113,7 @@ class App extends Component {
             searchInput = <SearchInput theme={categoryTheme} slot={isNarrow()?"title":"end-bar"} onChange={this.handleSearch} ref="searchInput" style={{display: "inline-block"}} />
         } else {
             document.preventTouch = false;
-        }
+         }
         if(!path.startsWith("/video") &&  !path.startsWith("/info")) {
 
             leftArrow =  <a slot="next" onClick={this.ScrollRight} id="scrolRight" className="navBtn"><img src="assets/arrow-right.svg" alt="arrow"/></a>
