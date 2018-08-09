@@ -7,7 +7,6 @@
     <author email="info@sap.com" href="http://sap.com">
         SAP CSR team
     </author>
-    <icon src="resources/icon.png" />
     <preference name="splashscreen" value="splash" />
     <preference name="ShowSplashScreenSpinner" value="false" />
     <platform name="ios">
@@ -24,6 +23,24 @@
         <splash height="2048" src="resources/Splash screen 1536 x 2048.png" width="1536" />
         <splash height="1536" src="resources/Splash screen 2048 x 1536.png" width="2048" />
         <splash height="1242" src="resources/Splash screen 2208 x 1242.png" width="2208" />
+        <icon height="180" src="resources/Icon-App-60x60@3x.png" width="180" />
+        <icon height="60" src="resources/Icon-App-60x60@1x.png" width="60" />
+        <icon height="120" src="resources/Icon-App-60x60@2x.png" width="120" />
+        <icon height="76" src="resources/Icon-App-76x76@1x.png" width="76" />
+        <icon height="152" src="resources/Icon-App-76x76@2x.png" width="152" />
+        <icon height="40" src="resources/Icon-App-40x40@1x.png" width="40" />
+        <icon height="80" src="resources/Icon-App-40x40@2x.png" width="80" />
+        <icon height="57" src="resources/Icon-App-57x57@1x.png" width="57" />
+        <icon height="114" src="resources/Icon-App-57x57@2x.png" width="114" />
+        <icon height="72" src="resources/Icon-App-72x72@1x.png" width="72" />
+        <icon height="144" src="resources/Icon-App-72x72@2x.png" width="144" />
+        <icon height="29" src="resources/Icon-App-29x29@1x.png" width="29" />
+        <icon height="58" src="resources/Icon-App-29x29@2x.png" width="58" />
+        <icon height="87" src="resources/Icon-App-29x29@3x.png" width="87" />
+        <icon height="50" src="resources/Icon-Small-50x50@1x.png" width="50" />
+        <icon height="100" src="resources/Icon-Small-50x50@2x.png" width="100" />
+        <icon height="20" src="resources/Icon-App-20x20@1x.png" width="20" />
+        <icon height="167" src="resources/Icon-App-83.5x83.5@2x.png" width="167" />
     </platform>
     <preference name="SplashScreenDelay" value="2000" />
     <preference name="FadeSplashScreen" value="false" />
