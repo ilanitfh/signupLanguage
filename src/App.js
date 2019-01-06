@@ -25,8 +25,8 @@ class App extends Component {
         this.ScrollRight = this.ScrollRight.bind(this);
         this.showInfo = this.showInfo.bind(this);
 
-        let winWidth = window.innerWidth;
-        let winHeight = window.innerHeight;
+        // let winWidth = window.innerWidth;
+        // let winHeight = window.innerHeight;
     }
 
     handleSearch(e) {

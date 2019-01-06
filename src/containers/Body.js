@@ -2,7 +2,7 @@ import React from "react";
 import '../css/App.css';
 import {jsonLocalCall} from "../apis/JsonLocalCall";
 import Tile2 from "../components/Tile2";
-import {rootTranslateX, saveRootTranslateX, getThemeFlavor, isNarrow} from "../utils/Utils";
+import {rootTranslateX, getThemeFlavor, isNarrow} from "../utils/Utils";
 
 var tilesElements;
 class Body extends React.Component {

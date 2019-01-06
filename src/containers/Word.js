@@ -2,7 +2,7 @@ import React from "react";
 import '../css/App.css';
 import {jsonLocalCall} from "../apis/JsonLocalCall";
 import Card2 from "../components/Card2";
-import {wordsTranslateX, saveWordTranslateX, getTheme} from "../utils/Utils";
+import {wordsTranslateX, getTheme} from "../utils/Utils";
 
 class Word extends React.Component {
     constructor(props){

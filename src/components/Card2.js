@@ -8,10 +8,6 @@ import Rope from "../components/Rope";
 
 
 class Card2 extends React.Component {
-   constructor(props){
-        super(props);
-        //this.play = this.play.bind(this);
-   }
 
     /*play(e) {
         e.preventDefault = true
